@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ED Crash Cards</title>
+<meta name="description" content="Bedside quick-reference cards for precipitous delivery, tube thoracostomy and emergency cricothyrotomy.">
+<meta name="theme-color" content="#12233A">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Crash Cards">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' fill='%2312233A'/%3E%3Crect x='40' y='74' width='100' height='32' rx='4' fill='white'/%3E%3Crect x='74' y='40' width='32' height='100' rx='4' fill='white'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#12233A;
+    --ink-2:#1D3556;
+    --paper:#F7F5F2;
+    --card:#FFFFFF;
+    --rule:#D6D2CB;
+    --slate:#5A6673;
+    --crash:#C4162B;
+    --crash-bg:#FCEEF0;
+    --amber:#B96B00;
+    --amber-bg:#FDF3E2;
+    --vital:#0F7B5A;
+    --vital-bg:#E9F5F0;
+
+    --display:'Barlow Condensed','Arial Narrow','Helvetica Neue',sans-serif;
+    --body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:15px;
+    line-height:1.45;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px 72px}
+
+  /* ---------- masthead ---------- */
+  .masthead{
+    background:var(--ink);
+    color:#fff;
+    margin:0 -16px;
+    padding:20px 20px 16px;
+  }
+  .masthead h1{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:clamp(30px,7vw,52px);
+    letter-spacing:.02em;
+    text-transform:uppercase;
+    line-height:.95;
+    margin:0;
+  }
+  .masthead h1 span{color:#7FB0E0;display:block;font-size:.44em;letter-spacing:.16em;font-weight:600;margin-bottom:6px}
+  .callout-strip{
+    display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;
+  }
+  .callout-strip b{
+    font-family:var(--display);text-transform:uppercase;letter-spacing:.07em;
+    font-size:15px;font-weight:600;
+    background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);
+    padding:5px 11px;border-radius:2px;color:#fff;
+  }
+  .two-patients{
+    margin-top:14px;font-size:13.5px;color:#B9CBE0;max-width:62ch;
+  }
+
+  /* ---------- jump nav ---------- */
+  nav.jump{
+    position:sticky;top:var(--barTop);z-index:20;
+    background:var(--ink-2);
+    margin:0 -16px 0;
+    padding:8px 12px;
+    display:flex;gap:4px;overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  nav.jump::-webkit-scrollbar{display:none}
+  nav.jump a{
+    font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;
+    font-size:14px;font-weight:600;color:#C6D8EA;text-decoration:none;
+    white-space:nowrap;padding:5px 10px;border-radius:2px;
+  }
+  nav.jump a:hover,nav.jump a:focus-visible{background:rgba(255,255,255,.14);color:#fff}
+
+  /* ---------- gate ---------- */
+  .gate{
+    background:var(--crash);color:#fff;
+    margin:0 -16px;padding:18px 20px;
+  }
+  .gate h2{
+    font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;
+    font-size:24px;margin:0 0 10px;font-weight:700;
+  }
+  .gate-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+  .gate-grid div{border-left:3px solid rgba(255,255,255,.55);padding-left:11px;font-size:14px}
+  .gate-grid strong{display:block;font-family:var(--display);font-size:18px;letter-spacing:.03em;text-transform:uppercase;font-weight:600}
+  .gate-foot{margin-top:14px;font-size:13.5px;background:rgba(0,0,0,.22);padding:9px 12px;border-radius:2px}
+
+  /* ---------- section headers ---------- */
+  h2.sec{
+    font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;
+    font-size:clamp(22px,4.5vw,30px);font-weight:700;
+    margin:44px 0 4px;padding-bottom:7px;border-bottom:3px solid var(--ink);
+  }
+  .sec-sub{color:var(--slate);font-size:13.5px;margin:0 0 18px}
+
+  /* ---------- the spine ---------- */
+  .spine{border-left:3px solid var(--ink);margin-left:8px;padding-left:0}
+  .stage{position:relative;padding:0 0 26px 22px}
+  .stage::before{
+    content:'';position:absolute;left:-9px;top:7px;
+    width:15px;height:15px;background:var(--ink);border-radius:50%;
+    border:3px solid var(--paper);
+  }
+  .stage-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:9px}
+  .stage-head h3{
+    font-family:var(--display);text-transform:uppercase;letter-spacing:.05em;
+    font-size:22px;font-weight:700;margin:0;
+  }
+  .clock{
+    font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.04em;
+    background:var(--ink);color:#fff;padding:3px 8px;border-radius:2px;
+    text-transform:uppercase;
+  }
+  ul.steps{margin:0;padding-left:19px}
+  ul.steps li{margin-bottom:7px}
+  ul.steps li::marker{color:var(--slate)}
+  ul.steps ul{margin:6px 0 0;padding-left:18px}
+
+  .kbd{
+    font-family:var(--display);text-transform:uppercase;letter-spacing:.05em;
+    font-weight:600;background:var(--ink);color:#fff;padding:1px 7px;border-radius:2px;font-size:14px;
+    white-space:nowrap;
+  }
+  .term{font-weight:600}
+
+  /* ---------- inline flags ---------- */
+  .flag{
+    display:block;margin:9px 0;padding:9px 12px;border-radius:2px;font-size:14px;
+    border-left:4px solid;
+  }
+  .flag.stop{background:var(--crash-bg);border-color:var(--crash)}
+  .flag.stop b{color:var(--crash)}
+  .flag.watch{background:var(--amber-bg);border-color:var(--amber)}
+  .flag.watch b{color:var(--amber)}
+  .flag.good{background:var(--vital-bg);border-color:var(--vital)}
+  .flag.good b{color:var(--vital)}
+  .flag b{font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:15px;margin-right:5px}
+
+  /* ---------- complication cards ---------- */
+  .bank{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+  .comp{
+    background:var(--card);border:1px solid var(--rule);border-top:5px solid var(--crash);
+    border-radius:3px;padding:15px 16px;
+  }
+  .comp h3{
+    font-family:var(--display);text-transform:uppercase;letter-spacing:.04em;
+    font-size:21px;font-weight:700;margin:0 0 3px;
+  }
+  .tell{font-size:13px;color:var(--slate);margin:0 0 11px;font-style:italic}
+  .comp ol{margin:0;padding-left:19px;font-size:14px}
+  .comp ol li{margin-bottom:6px}
+  .comp ul{margin:5px 0 0;padding-left:17px;font-size:13.5px}
+
+  /* ---------- never bar ---------- */
+  .never{background:var(--ink);color:#fff;border-radius:3px;padding:18px 20px;margin-top:8px}
+  .never h3{font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;font-size:22px;margin:0 0 12px;color:#FF9AA6}
+  .never ul{margin:0;padding-left:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
+  .never li{padding-left:24px;position:relative;font-size:14px;color:#E4EAF1}
+  .never li::before{content:'✕';position:absolute;left:0;top:0;color:var(--crash);font-weight:700;background:#fff;width:16px;height:16px;line-height:16px;text-align:center;border-radius:50%;font-size:11px}
+  .never li b{color:#fff}
+
+  /* ---------- tables ---------- */
+  .tablewrap{overflow-x:auto;border:1px solid var(--rule);border-radius:3px;background:var(--card);margin-bottom:22px}
+  table{border-collapse:collapse;width:100%;min-width:460px;font-size:14px}
+  caption{
+    text-align:left;font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;
+    font-size:18px;font-weight:700;padding:11px 14px;background:var(--ink);color:#fff;
+  }
+  th{
+    text-align:left;font-family:var(--display);text-transform:uppercase;letter-spacing:.05em;
+    font-size:14px;font-weight:600;color:var(--slate);
+    padding:8px 14px;border-bottom:2px solid var(--rule);background:#FBFAF8;
+  }
+  td{padding:9px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td.dose{font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;white-space:nowrap}
+  td.drug{font-weight:600;white-space:nowrap}
+  .contra{color:var(--crash);font-weight:600;font-size:12.5px;display:block;margin-top:3px}
+  td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:center;font-size:13px}
+  th.num{text-align:center}
+
+  /* ---------- exit checklist ---------- */
+  .exit{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+  .exit section{background:var(--card);border:1px solid var(--rule);border-radius:3px;padding:15px 16px}
+  .exit h3{font-family:var(--display);text-transform:uppercase;letter-spacing:.05em;font-size:19px;margin:0 0 10px}
+  .exit ul{margin:0;padding-left:0;list-style:none}
+  .exit li{padding-left:24px;position:relative;margin-bottom:7px;font-size:14px}
+  .exit li::before{
+    content:'';position:absolute;left:0;top:3px;width:13px;height:13px;
+    border:2px solid var(--slate);border-radius:2px;
+  }
+
+  footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--rule);color:var(--slate);font-size:12.5px}
+
+  /* ---------- diagrams ---------- */
+  .dx-defs{position:absolute;width:0;height:0;overflow:hidden}
+  figure.dx{
+    margin:14px 0 6px;background:var(--card);border:1px solid var(--rule);
+    border-radius:3px;padding:14px 14px 10px;break-inside:avoid;
+  }
+  figure.dx svg{display:block;width:100%;max-width:620px;height:auto;margin:0 auto}
+  figure.dx figcaption{font-size:12.5px;color:var(--slate);line-height:1.42;margin-top:10px;text-align:center}
+  figure.dx figcaption b{
+    font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;
+    font-size:14px;color:var(--ink);margin-right:6px;
+  }
+  .comp figure.dx{padding:11px 11px 8px;margin:12px 0 4px}
+  .comp figure.dx svg{max-width:380px}
+  .comp figure.dx figcaption{font-size:11.5px}
+
+  .dx-svg text{font-family:var(--body);font-size:13px;fill:var(--ink)}
+  .dx-svg .sm{font-size:11.5px;fill:var(--slate)}
+  .dx-svg .lbl{font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-weight:600;font-size:12.5px;fill:var(--slate)}
+  .dx-svg .hot{fill:var(--crash)}
+  .dx-svg .ok{fill:var(--vital)}
+  .dx-svg .bignum{font-family:var(--display);font-weight:700;font-size:17px;fill:#fff}
+  .comp .dx-svg text{font-size:11px}
+  .comp .dx-svg .sm{font-size:10px}
+
+  .dx-legend{
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+    background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--slate);
+    border-radius:3px;padding:10px 14px;margin:0 0 20px;font-size:12.5px;color:var(--slate);
+  }
+  .dx-legend span{display:inline-flex;align-items:center;gap:8px}
+  .dx-legend i{display:inline-block;width:22px;height:0;border-top:3px solid currentColor;position:relative;font-style:normal}
+  .dx-legend i::after{content:'';position:absolute;right:-2px;top:-4.5px;border-left:8px solid currentColor;border-top:4px solid transparent;border-bottom:4px solid transparent}
+  .dx-legend .k-red{color:var(--crash)}
+  .dx-legend .k-green{color:var(--vital)}
+  .dx-legend .k-x{width:auto;border:none;color:var(--crash);font-weight:700;font-size:14px}
+  .dx-legend .k-x::after{display:none}
+  .dx-legend em{font-style:normal;flex-basis:100%;font-size:12px}
+
+  @media (prefers-reduced-motion:no-preference){
+    html{scroll-behavior:smooth}
+  }
+  a:focus-visible,nav.jump a:focus-visible{outline:3px solid var(--vital);outline-offset:2px}
+
+  @media print{
+    nav.jump{display:none}
+    body{background:#fff;font-size:10.5px}
+    .wrap{max-width:none;padding:0}
+    .masthead,.gate{margin:0;padding:12px 14px}
+    .masthead h1{font-size:30px}
+    h2.sec{margin:18px 0 3px;font-size:19px;break-after:avoid}
+    .comp,.exit section,.tablewrap,.stage,.never{break-inside:avoid}
+    .bank,.exit{grid-template-columns:1fr 1fr}
+    .two-patients,footer{font-size:9px}
+  }
+
+  /* ================= app shell ================= */
+  :root{
+    --bar:52px;
+    --barTop:calc(52px + env(safe-area-inset-top));
+  }
+  .appbar{
+    position:sticky;top:0;z-index:40;height:var(--barTop);box-sizing:border-box;
+    background:var(--ink);border-bottom:1px solid rgba(255,255,255,.14);
+    display:flex;align-items:center;gap:6px;
+    padding:env(safe-area-inset-top) calc(8px + env(safe-area-inset-right)) 0 calc(8px + env(safe-area-inset-left));
+  }
+  .appbar .home{
+    flex:0 0 auto;display:flex;align-items:center;gap:7px;
+    background:none;border:0;color:#fff;cursor:pointer;
+    font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;
+    font-size:15px;font-weight:600;padding:9px 8px;border-radius:3px;min-height:44px;
+  }
+  .appbar .home:hover{background:rgba(255,255,255,.12)}
+  .appbar .home svg{width:15px;height:15px;flex:0 0 auto}
+  .pills{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+  .pills::-webkit-scrollbar{display:none}
+  .pills button{
+    flex:0 0 auto;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);
+    color:#C6D8EA;cursor:pointer;border-radius:3px;padding:8px 11px;min-height:38px;
+    font-family:var(--display);text-transform:uppercase;letter-spacing:.07em;
+    font-size:14px;font-weight:600;white-space:nowrap;
+  }
+  .pills button[aria-current="true"]{background:#fff;color:var(--ink);border-color:#fff}
+
+  .view{display:none}
+  .view.on{display:block}
+
+  /* ================= home ================= */
+  .home-wrap{max-width:1080px;margin:0 auto;padding:0 16px 56px}
+  .home-hero{background:var(--ink);color:#fff;margin:0 -16px 22px;padding:26px 20px 24px}
+  .home-hero h1{
+    font-family:var(--display);font-weight:700;text-transform:uppercase;
+    font-size:clamp(30px,8vw,50px);letter-spacing:.02em;line-height:.95;margin:0;
+  }
+  .home-hero h1 span{display:block;color:#7FB0E0;font-size:.36em;letter-spacing:.16em;font-weight:600;margin-bottom:7px}
+  .home-hero p{margin:14px 0 0;color:#B9CBE0;font-size:14px;max-width:60ch}
+
+  .deck{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
+  .deck button{
+    display:block;width:100%;text-align:left;cursor:pointer;font:inherit;
+    background:var(--card);border:1px solid var(--rule);border-left:6px solid var(--ink);
+    border-radius:3px;padding:17px 18px;color:var(--ink);
+  }
+  .deck button:hover{border-color:var(--ink);border-left-color:var(--ink);box-shadow:0 2px 10px rgba(18,35,58,.09)}
+  .deck .k{
+    font-family:var(--display);text-transform:uppercase;letter-spacing:.13em;
+    font-size:12.5px;font-weight:600;color:var(--slate);display:block;margin-bottom:3px;
+  }
+  .deck .n{
+    font-family:var(--display);text-transform:uppercase;letter-spacing:.03em;
+    font-size:27px;font-weight:700;line-height:1;display:block;margin-bottom:9px;
+  }
+  .deck .f{font-size:14px;color:var(--ink);margin:0 0 11px;line-height:1.4}
+  .deck .c{
+    display:inline-block;background:var(--crash-bg);color:var(--crash);
+    border-left:3px solid var(--crash);padding:6px 10px;border-radius:2px;
+    font-size:12.5px;font-weight:600;
+  }
+
+  .home-note{
+    margin-top:24px;background:var(--card);border:1px solid var(--rule);
+    border-left:4px solid var(--vital);border-radius:3px;padding:15px 17px;
+  }
+  .home-note h2{
+    font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;
+    font-size:18px;margin:0 0 8px;font-weight:700;
+  }
+  .home-note p{margin:0 0 7px;font-size:13.5px;color:var(--slate)}
+  .home-note p:last-child{margin-bottom:0}
+  .home-note b{color:var(--ink)}
+
+  .print-all{
+    margin-top:14px;width:100%;cursor:pointer;
+    background:none;border:1px dashed var(--slate);border-radius:3px;
+    color:var(--slate);padding:13px;min-height:46px;
+    font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;
+    font-size:15px;font-weight:600;
+  }
+  .print-all:hover{border-style:solid;border-color:var(--ink);color:var(--ink)}
+
+  .totop{
+    position:fixed;right:14px;z-index:35;
+    bottom:calc(14px + env(safe-area-inset-bottom));
+    width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.2);
+    background:var(--ink);color:#fff;cursor:pointer;font-size:17px;line-height:1;
+    box-shadow:0 3px 12px rgba(18,35,58,.3);display:none;
+  }
+  .totop.on{display:block}
+
+  @media print{
+    .appbar,.totop,.home-note,.print-all{display:none !important}
+    .view{display:none !important}
+    .view.on{display:block !important}
+    body.printall .view{display:block !important}
+    body.printall #v-home{display:none !important}
+    body.printall .view + .view{break-before:page}
+  }
+</style>
+<noscript><style>.view{display:block !important}.appbar .pills{display:none}</style></noscript>
+</head>
+<body>
+
+<svg class="dx-defs" aria-hidden="true" focusable="false"><defs>
+  <marker id="aRed" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#C4162B"/></marker>
+  <marker id="aGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#0F7B5A"/></marker>
+  <marker id="aInk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#12233A"/></marker>
+</defs></svg>
+
+<header class="appbar">
+  <button type="button" class="home" data-go="home" aria-label="All cards">
+    <svg viewBox="0 0 20 20" aria-hidden="true" fill="currentColor"><rect x="1" y="1" width="8" height="8" rx="1.5"/><rect x="11" y="1" width="8" height="8" rx="1.5"/><rect x="1" y="11" width="8" height="8" rx="1.5"/><rect x="11" y="11" width="8" height="8" rx="1.5"/></svg>
+    Cards
+  </button>
+  <div class="pills">
+      <button type="button" data-go="delivery">Delivery</button>
+      <button type="button" data-go="chest">Thoracostomy</button>
+      <button type="button" data-go="cric">Cricothyrotomy</button>
+  </div>
+</header>
+
+<section class="view" id="v-home">
+  <div class="home-wrap">
+    <div class="home-hero">
+      <h1><span>Emergency Department</span>Crash Cards</h1>
+      <p>Three bedside references for procedures you do rarely and cannot afford to do slowly. Pick one. Every card opens with the decision gate, then runs the procedure top to bottom.</p>
+    </div>
+    <div class="deck">
+      <button type="button" data-go="delivery">
+        <span class="k">Obstetric</span>
+        <span class="n">Precipitous Delivery</span>
+        <p class="f">Two patients, two teams. Assign a mother lead and a baby lead out loud.</p>
+        <span class="c">Crowning = you are delivering here</span>
+      </button>
+      <button type="button" data-go="chest">
+        <span class="k">Thoracic</span>
+        <span class="n">Tube Thoracostomy</span>
+        <p class="f">Confirm the side. Scan first. Nothing below the nipple line.</p>
+        <span class="c">Peri-arrest: finger thoracostomy, both sides</span>
+      </button>
+      <button type="button" data-go="cric">
+        <span class="k">Airway · CICO</span>
+        <span class="n">Cricothyrotomy</span>
+        <p class="f">Declare it out loud, then scalpel, finger, bougie.</p>
+        <span class="c">Say the words: this is a CICO situation</span>
+      </button>
+    </div>
+    <div class="home-note">
+      <h2>Using this on a phone</h2>
+      <p><b>Add to Home Screen</b> from the Safari share menu. It opens full screen without the browser bars and keeps working with no signal — everything, including the diagrams, is inside this one file.</p>
+      <p><b>Printing:</b> use your browser's print dialog while a card is open and only that card prints, laid out for paper rather than screen.</p>
+      <p><b>Hosting:</b> rename to <code>index.html</code> and drop it on any static host. No build step, no dependencies except the web font, which falls back cleanly if it cannot load.</p>
+    </div>
+    <button type="button" class="print-all" id="printAll">Print all three cards</button>
+  </div>
+</section>
+<section class="view" id="v-delivery">
+<div class="wrap">
+
+  <header class="masthead">
+    <h1><span>Emergency Department</span>Precipitous Delivery</h1>
+    <div class="callout-strip">
+      <b>Call OB</b><b>Call Peds / NICU</b><b>2nd warmer</b><b>Extra RN ×2</b>
+    </div>
+    <p class="two-patients">You now have two patients and you need two teams. Assign a mother lead and a baby lead out loud before the head is out — after that, nobody is free to reorganize.</p>
+  </header>
+
+  <nav class="jump" aria-label="Section shortcuts">
+    <a href="#delivery-imminent">Imminent?</a>
+    <a href="#delivery-run">The delivery</a>
+    <a href="#delivery-wrong">When it goes wrong</a>
+    <a href="#delivery-doses">Doses</a>
+    <a href="#delivery-scores">Apgar &amp; SpO₂</a>
+    <a href="#delivery-exit">Before they leave</a>
+  </nav>
+
+  <!-- ================= GATE ================= -->
+  <section class="gate" id="delivery-imminent">
+    <h2>Is delivery imminent? — 3 checks</h2>
+    <div class="gate-grid">
+      <div><strong>Look</strong>Crowning or bulging perineum. If you can see head, you are delivering here.</div>
+      <div><strong>Listen</strong>"I need to push" / "I have to have a bowel movement" = fetal head on rectum.</div>
+      <div><strong>Feel</strong>Contractions q2–3 min, &gt;60 sec, involuntary bearing down.</div>
+    </div>
+    <div class="gate-foot">
+      <strong>No digital exam</strong> until you have excluded previa in anyone with third-trimester bleeding. Bedside ultrasound first: fetal presentation, heart rate, placental location, number of fetuses.
+    </div>
+  </section>
+
+  <!-- ================= THE RUN ================= -->
+  <h2 class="sec" id="delivery-run">The delivery</h2>
+  <p class="sec-sub">Read this top to bottom. Times are from delivery of the baby.</p>
+
+  <div class="dx-legend">
+    <span><i class="k-red"></i>force you apply</span>
+    <span><i class="k-green"></i>correct hand position</span>
+    <span><i class="k-x">✕</i>never</span>
+    <em>Diagrams are schematic. They show direction of force and where your hands go, not anatomy.</em>
+  </div>
+
+  <div class="spine">
+
+    <div class="stage">
+      <div class="stage-head"><h3>Set up</h3><span class="clock">2 min, in parallel</span></div>
+      <ul class="steps">
+        <li><b>Mother:</b> two large-bore IVs, monitor, type &amp; screen or crossmatch, CBC, oxytocin drawn up and at the bedside <em>before</em> you need it.</li>
+        <li><b>Position:</b> lithotomy with the bed broken down, or left lateral if she cannot tolerate supine. Sterile drape, gown, face shield — this is a messy procedure.</li>
+        <li><b>Tray:</b> two clamps, scissors, bulb suction, cord clamp, warm dry towels ×4, sterile gloves.</li>
+        <li><b>Baby:</b> radiant warmer preheated, hat, neonatal bag-mask with correct-size mask, suction, pulse oximeter, towels. Food-grade plastic wrap or bag if &lt;32 weeks — do not dry preterm skin, wrap it wet.</li>
+        <li><b>Dating:</b> fundal height in cm above the symphysis ≈ gestational age in weeks from 20–36. At the umbilicus ≈ 20 weeks.</li>
+      </ul>
+      <span class="flag watch"><b>Ask fast</b>Prenatal care? Multiples? Prior cesarean? Known previa? Group B strep? Drug use? These change your plan and you will not get another chance to ask.</span>
+    </div>
+
+    <div class="stage">
+      <div class="stage-head"><h3>The head</h3><span class="clock">Slow is the whole job</span></div>
+      <ul class="steps">
+        <li>Let her push with contractions. Your hands are there to <em>slow</em> the head, not pull it.</li>
+        <li>Flat hand on the occiput applying gentle counter-pressure. An explosive head is what tears the perineum and shears intracranial vessels.</li>
+        <li>Support the perineum with a towel-covered hand; encourage panting between contractions to ease the head out between pushes.</li>
+        <li>Suction the mouth then nose <em>only</em> if there is visible obstruction. Routine bulb suction is no longer recommended and can cause reflex bradycardia.</li>
+        <li><b>Sweep for a nuchal cord</b> as soon as the head is out — run a finger around the neck.
+          <ul>
+            <li>Loose → slip it over the head.</li>
+            <li>Tight → <span class="term">somersault maneuver</span>: hold the head flexed against the thigh and let the body somersault out while the cord stays intact.</li>
+            <li>Only if truly unreducible → double clamp and cut. The clock on oxygen delivery starts the second you cut, so the body must come now.</li>
+          </ul>
+        </li>
+      </ul>
+      <figure class="dx">
+      <svg class="dx-svg" viewBox="0 0 460 195" role="img" aria-label="Three frames showing the somersault maneuver for a tight nuchal cord: head delivered with cord around the neck, head held flexed against the thigh, then the body somersaults out with the cord left intact">
+        <path d="M36 100 Q78 122 120 112" fill="none" stroke="#12233A" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="78" cy="74" r="25" fill="#FFFFFF" stroke="#12233A" stroke-width="2.5"/>
+        <path d="M54 88 C64 104 92 104 102 88" fill="none" stroke="#C4162B" stroke-width="4" stroke-linecap="round"/>
+        <text class="sm hot" x="78" y="140" text-anchor="middle">1 · tight nuchal cord</text>
+        <text class="sm" x="78" y="157" text-anchor="middle">do not cut it</text>
+
+        <path d="M188 100 Q230 122 272 112" fill="none" stroke="#12233A" stroke-width="2.5" stroke-linecap="round"/>
+        <rect x="256" y="46" width="16" height="64" rx="8" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <circle cx="228" cy="74" r="25" fill="#FFFFFF" stroke="#12233A" stroke-width="2.5"/>
+        <path d="M204 88 C214 104 242 104 252 88" fill="none" stroke="#C4162B" stroke-width="4" stroke-linecap="round"/>
+        <path d="M206 40 A36 36 0 0 1 250 44" fill="none" stroke="#0F7B5A" stroke-width="3.5" marker-end="url(#aGreen)"/>
+        <text class="sm ok" x="230" y="140" text-anchor="middle">2 · hold head flexed</text>
+        <text class="sm" x="230" y="157" text-anchor="middle">against the thigh</text>
+
+        <path d="M340 100 Q382 122 424 112" fill="none" stroke="#12233A" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="372" cy="88" r="22" fill="#FFFFFF" stroke="#12233A" stroke-width="2.5"/>
+        <ellipse cx="406" cy="48" rx="24" ry="15" transform="rotate(-32 406 48)" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <path d="M350 68 A46 46 0 0 1 398 30" fill="none" stroke="#0F7B5A" stroke-width="3.5" marker-end="url(#aGreen)"/>
+        <path d="M352 98 C362 112 388 112 396 98" fill="none" stroke="#C4162B" stroke-width="3.5" stroke-linecap="round"/>
+        <text class="sm ok" x="382" y="140" text-anchor="middle">3 · somersault the body</text>
+        <text class="sm" x="382" y="157" text-anchor="middle">cord stays intact</text>
+      </svg>
+      <figcaption><b>Somersault</b>The head stays flexed against the perineum and thigh while the body rolls out over it. Cutting a tight nuchal cord ends the baby's oxygen supply, so it is the last option, not the first.</figcaption>
+      </figure>
+    </div>
+
+    <div class="stage">
+      <div class="stage-head"><h3>The shoulders</h3><span class="clock">Down, then up</span></div>
+      <ul class="steps">
+        <li>Wait for <span class="term">restitution</span> — the head turns on its own to face a thigh. Do not force it.</li>
+        <li><b>Anterior shoulder:</b> hands on the parietal bones, gentle traction <em>toward the floor</em>.</li>
+        <li><b>Posterior shoulder:</b> then lift gently <em>toward the ceiling</em>.</li>
+        <li>The body follows fast and is extremely slippery. Support the head and neck with one hand, hook the other under the axilla or grip the ankles. Keep the baby at or slightly below the level of the perineum.</li>
+        <li>Say the time of delivery out loud so someone documents it.</li>
+      </ul>
+      <figure class="dx">
+      <svg class="dx-svg" viewBox="0 0 460 215" role="img" aria-label="Side view of the delivered head with two force arrows: first downward toward the floor to free the anterior shoulder, then upward to deliver the posterior shoulder">
+        <path d="M40 66 H100 V158 H40 Z" fill="#EDEAE5"/>
+        <rect x="96" y="46" width="84" height="18" rx="9" fill="#12233A"/>
+        <text class="lbl" x="96" y="38">symphysis</text>
+        <path d="M96 160 Q142 186 194 174" fill="none" stroke="#12233A" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="142" cy="112" r="38" fill="#FFFFFF" stroke="#12233A" stroke-width="3"/>
+        <path d="M114 85 A38 38 0 0 0 114 139" fill="none" stroke="#0F7B5A" stroke-width="5" stroke-linecap="round"/>
+        <text class="sm ok" x="8" y="206">green = your hands on the parietal bones</text>
+        <line x1="186" y1="130" x2="236" y2="178" stroke="#C4162B" stroke-width="3.5" marker-end="url(#aRed)"/>
+        <line x1="186" y1="94" x2="236" y2="46" stroke="#C4162B" stroke-width="3.5" marker-end="url(#aRed)"/>
+        <circle cx="254" cy="184" r="13" fill="#C4162B"/><text class="bignum" x="254" y="190" text-anchor="middle">1</text>
+        <circle cx="254" cy="40" r="13" fill="#C4162B"/><text class="bignum" x="254" y="46" text-anchor="middle">2</text>
+        <text x="276" y="180">anterior shoulder</text>
+        <text class="sm" x="276" y="197">traction toward the floor</text>
+        <text x="276" y="36">posterior shoulder</text>
+        <text class="sm" x="276" y="53">then lift upward</text>
+      </svg>
+      <figcaption><b>Shoulders</b>Down first, then up — one smooth arc, never a yank. Traction on the head is what injures the brachial plexus, so let the pushing do the work.</figcaption>
+      </figure>
+      <span class="flag stop"><b>Turtle sign</b>The head delivers, then retracts against the perineum and the shoulders do not follow. That is shoulder dystocia — jump to the card below and start the clock.</span>
+    </div>
+
+    <div class="stage">
+      <div class="stage-head"><h3>The baby</h3><span class="clock">+0 to 60 sec</span></div>
+      <ul class="steps">
+        <li>Warm, dry, stimulate, position the airway. Vigorous term baby → straight to the mother's chest, skin to skin, blanket and hat over both.</li>
+        <li><b>Three questions:</b> Term? Good tone? Breathing or crying? All yes → routine care with the mother. Any no → warmer.</li>
+        <li>Apneic, gasping, or HR &lt;100 → <b>PPV within the first 60 seconds</b>, rate 40–60/min. Start at 21% O₂ if ≥35 weeks, 21–30% if less.</li>
+        <li>Not improving on PPV → run <span class="kbd">MR SOPA</span>: Mask reseat, Reposition head, Suction, Open mouth, Pressure up, Airway alternative.</li>
+        <li>HR &lt;60 after 30 sec of <em>effective</em> ventilation → compressions 3:1 with breaths (90 compressions + 30 breaths per minute), go to 100% O₂, get umbilical venous access.</li>
+        <li>Check a glucose. Apgar at 1 and 5 minutes, and every 5 minutes to 20 if the 5-minute score is &lt;7.</li>
+      </ul>
+      <figure class="dx">
+      <svg class="dx-svg" viewBox="0 0 460 396" role="img" aria-label="Neonatal resuscitation decision flow from the initial three questions through positive pressure ventilation, chest compressions and epinephrine">
+        <rect x="18" y="8" width="282" height="46" rx="3" fill="#FFFFFF" stroke="#D6D2CB" stroke-width="1.5"/>
+        <text x="159" y="29" text-anchor="middle">Term? Good tone?</text>
+        <text x="159" y="46" text-anchor="middle">Breathing or crying?</text>
+        <line x1="300" y1="31" x2="310" y2="31" stroke="#0F7B5A" stroke-width="2" marker-end="url(#aGreen)"/>
+        <rect x="318" y="9" width="134" height="44" rx="3" fill="#E9F5F0" stroke="#0F7B5A" stroke-width="1.5"/>
+        <text class="sm ok" x="385" y="28" text-anchor="middle">yes → skin to skin,</text>
+        <text class="sm ok" x="385" y="44" text-anchor="middle">routine care</text>
+
+        <line x1="159" y1="54" x2="159" y2="70" stroke="#12233A" stroke-width="2" marker-end="url(#aInk)"/>
+        <text class="sm" x="167" y="68">no</text>
+        <rect x="18" y="74" width="282" height="42" rx="3" fill="#FFFFFF" stroke="#D6D2CB" stroke-width="1.5"/>
+        <text x="159" y="94" text-anchor="middle">Warmer · dry · stimulate ·</text>
+        <text x="159" y="110" text-anchor="middle">position the airway</text>
+
+        <line x1="159" y1="116" x2="159" y2="132" stroke="#12233A" stroke-width="2" marker-end="url(#aInk)"/>
+        <rect x="18" y="136" width="282" height="44" rx="3" fill="#FFFFFF" stroke="#D6D2CB" stroke-width="1.5"/>
+        <text x="159" y="157" text-anchor="middle">Apneic or gasping,</text>
+        <text x="159" y="174" text-anchor="middle">or HR &lt; 100?</text>
+
+        <line x1="159" y1="180" x2="159" y2="196" stroke="#C4162B" stroke-width="2" marker-end="url(#aRed)"/>
+        <text class="sm hot" x="167" y="194">yes</text>
+        <rect x="18" y="200" width="282" height="48" rx="3" fill="#FCEEF0" stroke="#C4162B" stroke-width="1.5"/>
+        <text x="159" y="222" text-anchor="middle">PPV 40–60/min within 60 sec</text>
+        <text class="sm" x="159" y="240" text-anchor="middle">21% O₂ · 21–30% if &lt; 35 wk</text>
+        <line x1="300" y1="222" x2="310" y2="222" stroke="#B96B00" stroke-width="2" marker-end="url(#aInk)"/>
+        <rect x="318" y="200" width="134" height="48" rx="3" fill="#FDF3E2" stroke="#B96B00" stroke-width="1.5"/>
+        <text class="sm" x="385" y="220" text-anchor="middle">not improving →</text>
+        <text class="sm" x="385" y="238" text-anchor="middle">run MR SOPA</text>
+
+        <line x1="159" y1="248" x2="159" y2="264" stroke="#12233A" stroke-width="2" marker-end="url(#aInk)"/>
+        <rect x="18" y="268" width="282" height="44" rx="3" fill="#FFFFFF" stroke="#D6D2CB" stroke-width="1.5"/>
+        <text x="159" y="289" text-anchor="middle">HR &lt; 60 after 30 sec</text>
+        <text x="159" y="306" text-anchor="middle">of effective PPV?</text>
+
+        <line x1="159" y1="312" x2="159" y2="328" stroke="#C4162B" stroke-width="2" marker-end="url(#aRed)"/>
+        <text class="sm hot" x="167" y="326">yes</text>
+        <rect x="18" y="332" width="282" height="50" rx="3" fill="#FCEEF0" stroke="#C4162B" stroke-width="1.5"/>
+        <text x="159" y="354" text-anchor="middle">Compressions 3:1 · 90 + 30/min</text>
+        <text class="sm" x="159" y="372" text-anchor="middle">100% O₂ · umbilical venous access</text>
+        <line x1="300" y1="354" x2="310" y2="354" stroke="#C4162B" stroke-width="2" marker-end="url(#aRed)"/>
+        <rect x="318" y="332" width="134" height="50" rx="3" fill="#FFFFFF" stroke="#C4162B" stroke-width="1.5"/>
+        <text class="sm hot" x="385" y="350" text-anchor="middle">still &lt; 60 →</text>
+        <text class="sm hot" x="385" y="366" text-anchor="middle">epinephrine</text>
+        <text class="sm hot" x="385" y="380" text-anchor="middle">0.01–0.03 mg/kg</text>
+      </svg>
+      <figcaption><b>The golden minute</b>Ventilation is the intervention that works in the newborn — almost every bradycardic baby is bradycardic because of hypoxia. Fix the ventilation before you escalate.</figcaption>
+      </figure>
+    </div>
+
+    <div class="stage">
+      <div class="stage-head"><h3>The cord</h3><span class="clock">+30 to 60 sec</span></div>
+      <ul class="steps">
+        <li><b>Delay clamping 30–60 seconds</b> in any vigorous baby, term or preterm. Keep the baby warm and at the level of the perineum while you wait.</li>
+        <li>Clamp at roughly 2 cm and 4 cm from the abdominal wall, cut between with sterile scissors.</li>
+        <li>Collect cord blood for type and Coombs if the mother is Rh-negative or blood type is unknown.</li>
+      </ul>
+      <figure class="dx">
+      <svg class="dx-svg" viewBox="0 0 460 150" role="img" aria-label="Two clamps on the umbilical cord at about two and four centimetres from the abdominal wall with the cut made between them">
+        <path d="M62 20 C24 48 24 92 62 120 Z" fill="#EDEAE5" stroke="#12233A" stroke-width="2.5"/>
+        <text class="lbl" x="14" y="140">baby</text>
+        <path d="M62 70 C110 54 140 86 190 70 C240 54 268 86 316 70" fill="none" stroke="#8C97A3" stroke-width="8" stroke-linecap="round"/>
+        <rect x="126" y="44" width="11" height="50" rx="4" fill="#12233A"/>
+        <rect x="216" y="44" width="11" height="50" rx="4" fill="#12233A"/>
+        <line x1="171" y1="38" x2="171" y2="102" stroke="#C4162B" stroke-width="2.5" stroke-dasharray="5 4"/>
+        <text class="sm hot" x="171" y="28" text-anchor="middle">cut here</text>
+        <line x1="62" y1="108" x2="131" y2="108" stroke="#5A6673" stroke-width="1"/>
+        <line x1="62" y1="103" x2="62" y2="113" stroke="#5A6673" stroke-width="1"/>
+        <line x1="131" y1="103" x2="131" y2="113" stroke="#5A6673" stroke-width="1"/>
+        <text class="sm" x="139" y="112">≈ 2 cm</text>
+        <line x1="62" y1="130" x2="221" y2="130" stroke="#5A6673" stroke-width="1"/>
+        <line x1="221" y1="125" x2="221" y2="135" stroke="#5A6673" stroke-width="1"/>
+        <text class="sm" x="229" y="134">≈ 4 cm</text>
+        <text class="sm ok" x="300" y="44">delay clamping 30–60 sec</text>
+        <text class="sm ok" x="300" y="60">in any vigorous baby</text>
+      </svg>
+      <figcaption><b>Cord</b>Leave enough length on the baby's side for umbilical venous access if the resuscitation escalates.</figcaption>
+      </figure>
+      <span class="flag stop"><b>Clamp now instead</b>Baby needs immediate resuscitation, or there is abruption, previa, cord avulsion, or monochorionic twins.</span>
+    </div>
+
+    <div class="stage">
+      <div class="stage-head"><h3>The placenta</h3><span class="clock">5 to 30 min</span></div>
+      <ul class="steps">
+        <li>Give <b>oxytocin</b> once the baby is out — 10 units IM, or 20–40 units in 1 L crystalloid run fast.</li>
+        <li><b>Three signs of separation:</b> a gush of blood, the cord lengthening, the uterus rising and becoming firm and globular.</li>
+        <li>Only then, gentle controlled cord traction with your other hand pushing the uterus <em>up and back</em> above the symphysis (Brandt-Andrews). Counter-pressure is what prevents inversion.</li>
+        <li>Massage the fundus until firm. Inspect the placenta and membranes for completeness — a missing cotyledon means retained tissue and ongoing bleeding.</li>
+        <li>Inspect the perineum, vagina and cervix in good light. First and second degree tears you can repair; third or fourth degree involves the anal sphincter or rectal mucosa and goes to OB.</li>
+      </ul>
+      <figure class="dx">
+      <svg class="dx-svg" viewBox="0 0 460 215" role="img" aria-label="One hand applies counter-pressure above the symphysis pushing the uterus up and back while the other applies gentle traction on the cord">
+        <ellipse cx="150" cy="98" rx="60" ry="52" fill="#EDEAE5" stroke="#12233A" stroke-width="2.5"/>
+        <text class="lbl" x="122" y="102">uterus</text>
+        <rect x="186" y="152" width="52" height="16" rx="8" fill="#12233A"/>
+        <text class="lbl" x="176" y="186">symphysis</text>
+        <rect x="214" y="128" width="58" height="25" rx="12" fill="#FFFFFF" stroke="#12233A" stroke-width="2.5"/>
+        <line x1="222" y1="130" x2="188" y2="102" stroke="#0F7B5A" stroke-width="4" marker-end="url(#aGreen)"/>
+        <path d="M196 140 C250 168 320 186 396 196" fill="none" stroke="#8C97A3" stroke-width="6" stroke-linecap="round"/>
+        <line x1="366" y1="190" x2="412" y2="198" stroke="#12233A" stroke-width="3" marker-end="url(#aInk)"/>
+        <text class="ok" x="256" y="104">hold the uterus</text>
+        <text class="ok" x="256" y="122">up and back</text>
+        <text class="sm" x="300" y="150">gentle cord traction —</text>
+        <text class="sm" x="300" y="166">only after separation</text>
+        <text class="sm hot" x="8" y="26">never pull before the cord lengthens and the uterus rises</text>
+      </svg>
+      <figcaption><b>Brandt-Andrews</b>The counter-pressure is the whole point — it is what keeps the uterus from following the placenta out.</figcaption>
+      </figure>
+
+      <figure class="dx">
+      <svg class="dx-svg" viewBox="0 0 460 200" role="img" aria-label="Cross-section of perineal tissue layers showing how first through fourth degree lacerations extend progressively deeper">
+        <rect x="18" y="26" width="272" height="26" fill="#F1EEE9" stroke="#D6D2CB"/>
+        <rect x="18" y="56" width="272" height="26" fill="#E6E2DB" stroke="#D6D2CB"/>
+        <rect x="18" y="86" width="272" height="26" fill="#F1EEE9" stroke="#D6D2CB"/>
+        <rect x="18" y="116" width="272" height="26" fill="#E6E2DB" stroke="#D6D2CB"/>
+        <text class="sm" x="298" y="45">skin &amp; vaginal mucosa</text>
+        <text class="sm" x="298" y="75">perineal body muscle</text>
+        <text class="sm" x="298" y="105">anal sphincter</text>
+        <text class="sm" x="298" y="135">rectal mucosa</text>
+        <rect x="52" y="26" width="9" height="26" fill="#C4162B"/>
+        <rect x="112" y="26" width="9" height="56" fill="#C4162B"/>
+        <rect x="172" y="26" width="9" height="86" fill="#C4162B"/>
+        <rect x="232" y="26" width="9" height="116" fill="#C4162B"/>
+        <text class="hot" x="56" y="166" text-anchor="middle">1°</text>
+        <text class="hot" x="116" y="166" text-anchor="middle">2°</text>
+        <text class="hot" x="176" y="166" text-anchor="middle">3°</text>
+        <text class="hot" x="236" y="166" text-anchor="middle">4°</text>
+        <text class="sm hot" x="18" y="190">third and fourth degree involve the sphincter — repair by OB</text>
+      </svg>
+      <figcaption><b>Lacerations</b>Put a finger in the rectum before you call it second degree. A missed sphincter injury becomes long-term incontinence.</figcaption>
+      </figure>
+      <span class="flag stop"><b>Do not pull</b>Traction on a placenta that has not separated causes cord avulsion or uterine inversion. If it has not delivered by 30 minutes, that is retained placenta — call OB, do not escalate your pulling.</span>
+    </div>
+
+  </div>
+
+  <!-- ================= NEVER ================= -->
+  <h2 class="sec">Hard stops</h2>
+  <p class="sec-sub">The small set of things that convert a manageable delivery into a catastrophe.</p>
+  <div class="never">
+    <h3>Never</h3>
+    <ul>
+      <li><b>Fundal pressure</b> in shoulder dystocia. It impacts the shoulder further and ruptures uteri. Suprapubic only.</li>
+      <li><b>Digital exam</b> with third-trimester bleeding until previa is excluded.</li>
+      <li><b>Cord traction</b> before signs of placental separation.</li>
+      <li><b>Hard traction on the fetal head</b> — brachial plexus injury is a traction injury.</li>
+      <li><b>Pull on a breech.</b> Hands off until the scapulae are visible.</li>
+      <li><b>Methylergonovine</b> in hypertension or preeclampsia.</li>
+      <li><b>Carboprost</b> in asthma.</li>
+      <li><b>Uterotonics before</b> replacing an inverted uterus.</li>
+    </ul>
+  </div>
+
+  <!-- ================= COMPLICATIONS ================= -->
+  <h2 class="sec" id="delivery-wrong">When it goes wrong</h2>
+  <p class="sec-sub">These do not happen on a schedule. Note the time out loud when any of them starts.</p>
+
+  <div class="bank">
+
+    <div class="comp">
+      <h3>Shoulder dystocia</h3>
+      <p class="tell">Turtle sign — head delivers then retracts, shoulders do not follow with routine traction.</p>
+      <ol>
+        <li><b>Help.</b> Call it out, note the time, get OB and peds in the room. Drop the head of the bed flat.</li>
+        <li><b>Legs — McRoberts.</b> Two assistants hyperflex the hips onto the abdomen. This alone resolves the majority.</li>
+        <li><b>Suprapubic pressure</b> directed downward and laterally onto the anterior shoulder to adduct it. <em>Not fundal.</em></li>
+        <li><b>Enter</b> — rotational maneuvers: Rubin II (push the anterior shoulder toward the fetal chest), Woods screw, then reverse Woods.</li>
+        <li><b>Remove the posterior arm.</b> Sweep it across the chest and out. Highly effective when rotation fails.</li>
+        <li><b>Roll</b> onto all fours (Gaskin) and re-attempt.</li>
+      </ol>
+      <ul>
+        <li>Last resort: deliberate clavicular fracture, Zavanelli replacement with cesarean, symphysiotomy.</li>
+        <li>Consider episiotomy to make room for your hand — it does not relieve the bony impaction itself.</li>
+      </ul>
+      <figure class="dx">
+      <svg class="dx-svg" viewBox="0 0 300 205" role="img" aria-label="McRoberts position with hips hyperflexed onto the abdomen, suprapubic pressure applied downward just above the symphysis, and fundal pressure crossed out as never appropriate">
+        <line x1="10" y1="178" x2="290" y2="178" stroke="#D6D2CB" stroke-width="2"/>
+        <ellipse cx="118" cy="128" rx="48" ry="38" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <circle cx="46" cy="142" r="13" fill="#FFFFFF" stroke="#12233A" stroke-width="2"/>
+        <path d="M60 150 C82 152 96 148 110 142" fill="none" stroke="#12233A" stroke-width="2"/>
+        <line x1="168" y1="152" x2="206" y2="86" stroke="#12233A" stroke-width="11" stroke-linecap="round"/>
+        <line x1="206" y1="86" x2="152" y2="54" stroke="#12233A" stroke-width="10" stroke-linecap="round"/>
+        <circle cx="174" cy="146" r="4" fill="#12233A"/>
+        <line x1="198" y1="118" x2="180" y2="146" stroke="#0F7B5A" stroke-width="4" marker-end="url(#aGreen)"/>
+        <line x1="118" y1="52" x2="118" y2="84" stroke="#C4162B" stroke-width="3.5" marker-end="url(#aRed)"/>
+        <path d="M108 56 L128 76 M128 56 L108 76" stroke="#C4162B" stroke-width="4" stroke-linecap="round"/>
+        <text class="sm hot" x="6" y="70">never fundal</text>
+        <text class="sm ok" x="212" y="112">suprapubic —</text>
+        <text class="sm ok" x="212" y="126">down + lateral</text>
+        <text class="sm" x="6" y="198">McRoberts: hips hyperflexed onto the abdomen</text>
+      </svg>
+      <figcaption><b>McRoberts + suprapubic</b>Together these resolve most dystocias. Fundal pressure impacts the shoulder further and ruptures uteri.</figcaption>
+      </figure>
+    </div>
+
+    <div class="comp">
+      <h3>Cord prolapse</h3>
+      <p class="tell">Palpable pulsating cord in the vagina, or sudden profound fetal bradycardia after rupture of membranes.</p>
+      <ol>
+        <li><b>Gloved hand into the vagina and elevate the presenting part off the cord. Do not remove it</b> — you stay there, hand in place, all the way to the operating room.</li>
+        <li>Knee-chest position or steep Trendelenburg.</li>
+        <li>Do not attempt to reduce the cord and handle it as little as possible; manipulation causes vasospasm.</li>
+        <li>Alternative if you must free your hand: fill the bladder with 500–700 mL saline via Foley, then clamp.</li>
+        <li>Terbutaline 0.25 mg SC for tocolysis.</li>
+        <li><b>Emergent cesarean.</b> This is a surgical problem, not a delivery problem.</li>
+      </ol>
+      <figure class="dx">
+      <svg class="dx-svg" viewBox="0 0 300 205" role="img" aria-label="Knee-chest position with a gloved hand in the vagina elevating the presenting part off the prolapsed cord">
+        <line x1="10" y1="184" x2="290" y2="184" stroke="#D6D2CB" stroke-width="2"/>
+        <circle cx="42" cy="166" r="12" fill="#FFFFFF" stroke="#12233A" stroke-width="2"/>
+        <path d="M54 170 C92 166 116 142 136 108" fill="none" stroke="#12233A" stroke-width="9" stroke-linecap="round"/>
+        <ellipse cx="158" cy="94" rx="30" ry="28" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <ellipse cx="150" cy="96" rx="17" ry="16" fill="#FFFFFF" stroke="#12233A" stroke-width="1.5"/>
+        <line x1="166" y1="118" x2="182" y2="180" stroke="#12233A" stroke-width="11" stroke-linecap="round"/>
+        <line x1="182" y1="180" x2="232" y2="182" stroke="#12233A" stroke-width="10" stroke-linecap="round"/>
+        <path d="M160 114 C172 132 174 144 184 158" fill="none" stroke="#C4162B" stroke-width="4" stroke-linecap="round"/>
+        <rect x="228" y="136" width="54" height="20" rx="10" fill="#FFFFFF" stroke="#12233A" stroke-width="2"/>
+        <path d="M230 142 C216 138 204 134 196 128" fill="none" stroke="#12233A" stroke-width="3.5" stroke-linecap="round"/>
+        <line x1="196" y1="130" x2="172" y2="108" stroke="#0F7B5A" stroke-width="4" marker-end="url(#aGreen)"/>
+        <text class="sm" x="6" y="34">knee–chest</text>
+        <text class="sm ok" x="196" y="46">elevate the part</text>
+        <text class="sm ok" x="196" y="60">off the cord</text>
+        <text class="sm ok" x="196" y="74">hand stays until OR</text>
+        <text class="sm hot" x="6" y="200">cord: do not reduce, minimal handling</text>
+      </svg>
+      <figcaption><b>Cord prolapse</b>Your hand becomes part of the transport. Whoever puts it in goes to the operating room with the patient.</figcaption>
+      </figure>
+    </div>
+
+    <div class="comp">
+      <h3>Breech</h3>
+      <p class="tell">Buttocks or feet presenting. Wants an OR — but if it is already delivering, it is delivering.</p>
+      <ol>
+        <li><b>Hands off the breech.</b> Let it deliver spontaneously to the umbilicus. Traction extends the arms and the head and causes entrapment.</li>
+        <li>Keep the fetal back anterior. Wrap the body in a towel for grip, support only.</li>
+        <li>Scapulae visible → sweep each arm down across the chest. Rotate 180° each way (Løvset) if an arm is trapped above the head.</li>
+        <li><b>Head — Mauriceau-Smellie-Veit.</b> Body straddles your forearm, index and middle fingers on the maxilla to flex the head, other hand on the shoulders with a finger on the occiput, gentle downward traction plus an assistant applying suprapubic pressure.</li>
+      </ol>
+      <ul>
+        <li>Highest risks: head entrapment, especially preterm where the body fits through an incompletely dilated cervix; and cord prolapse.</li>
+      </ul>
+      <figure class="dx">
+      <svg class="dx-svg" viewBox="0 0 300 215" role="img" aria-label="Mauriceau-Smellie-Veit manoeuvre: the fetal body rides the operator's forearm while two fingers on the maxilla flex the head and the other hand rests on the shoulders with a finger on the occiput">
+        <rect x="86" y="30" width="60" height="15" rx="7" fill="#12233A"/>
+        <text class="lbl" x="86" y="24">symphysis</text>
+        <rect x="44" y="140" width="118" height="21" rx="10" fill="#FFFFFF" stroke="#12233A" stroke-width="2"/>
+        <circle cx="126" cy="82" r="25" fill="#FFFFFF" stroke="#12233A" stroke-width="2.5"/>
+        <path d="M108 96 L118 103" stroke="#12233A" stroke-width="2.5" stroke-linecap="round"/>
+        <rect x="112" y="104" width="34" height="72" rx="17" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <path d="M102 146 C104 126 108 110 116 100" fill="none" stroke="#0F7B5A" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M112 152 C114 132 118 116 124 106" fill="none" stroke="#0F7B5A" stroke-width="3.5" stroke-linecap="round"/>
+        <rect x="150" y="56" width="34" height="15" rx="7" fill="#FFFFFF" stroke="#12233A" stroke-width="2"/>
+        <path d="M156 70 C152 84 150 96 148 106" fill="none" stroke="#12233A" stroke-width="3" stroke-linecap="round"/>
+        <path d="M172 70 C166 82 160 92 152 100" fill="none" stroke="#12233A" stroke-width="3" stroke-linecap="round"/>
+        <path d="M156 44 A34 34 0 0 0 106 52" fill="none" stroke="#0F7B5A" stroke-width="3.5" marker-end="url(#aGreen)"/>
+        <text class="sm ok" x="192" y="96">fingers on the</text>
+        <text class="sm ok" x="192" y="110">MAXILLA</text>
+        <text class="sm hot" x="192" y="124">never the mandible</text>
+        <text class="sm" x="192" y="54">other hand:</text>
+        <text class="sm" x="192" y="68">shoulders + occiput</text>
+        <text class="sm" x="6" y="200">body straddles your forearm</text>
+      </svg>
+      <figcaption><b>Mauriceau-Smellie-Veit</b>The fingers flex the head; they do not pull it. Traction on the mandible dislocates the jaw and does nothing for the entrapment.</figcaption>
+      </figure>
+    </div>
+
+    <div class="comp">
+      <h3>Postpartum hemorrhage</h3>
+      <p class="tell">&gt;1000 mL, or any bleeding with hemodynamic change. Tone, trauma, tissue, thrombin — atony is 70–80%.</p>
+      <ol>
+        <li><b>Bimanual massage</b> — fist in the anterior fornix, other hand compressing the fundus from above. Start this while people fetch drugs.</li>
+        <li>Oxytocin, then add a second agent from the dose table. Do not wait to see if the first one works alone.</li>
+        <li><b>TXA 1 g IV</b> over 10 min, within 3 hours of onset. Repeat once if still bleeding at 30 min.</li>
+        <li>Two large-bore IVs, crossmatch, activate massive transfusion early.</li>
+        <li>Look for what massage will not fix: retained placenta, cervical or vaginal laceration, vulvar hematoma, uterine inversion, rupture.</li>
+        <li>Tamponade: Bakri balloon, or a Foley with 60–80 mL if that is what you have. Aortic compression buys time to the OR.</li>
+      </ol>
+      <figure class="dx">
+      <svg class="dx-svg" viewBox="0 0 300 205" role="img" aria-label="Bimanual uterine massage with one hand cupping the fundus abdominally and a fist in the anterior vaginal fornix compressing the uterus between them">
+        <ellipse cx="128" cy="102" rx="50" ry="44" fill="#EDEAE5" stroke="#12233A" stroke-width="2.5"/>
+        <text class="lbl" x="104" y="106">uterus</text>
+        <rect x="98" y="20" width="62" height="24" rx="12" fill="#FFFFFF" stroke="#12233A" stroke-width="2"/>
+        <line x1="128" y1="48" x2="128" y2="74" stroke="#0F7B5A" stroke-width="4" marker-end="url(#aGreen)"/>
+        <circle cx="124" cy="172" r="18" fill="#FFFFFF" stroke="#12233A" stroke-width="2.5"/>
+        <line x1="112" y1="184" x2="88" y2="200" stroke="#12233A" stroke-width="10" stroke-linecap="round"/>
+        <line x1="124" y1="150" x2="124" y2="126" stroke="#0F7B5A" stroke-width="4" marker-end="url(#aGreen)"/>
+        <text class="sm" x="186" y="28">hand cups the</text>
+        <text class="sm" x="186" y="42">fundus from above</text>
+        <text class="sm" x="186" y="166">fist in the</text>
+        <text class="sm" x="186" y="180">anterior fornix</text>
+      </svg>
+      <figcaption><b>Bimanual massage</b>Start this with your own hands while someone else draws up the drugs. It is the fastest thing available to you.</figcaption>
+      </figure>
+    </div>
+
+    <div class="comp">
+      <h3>Uterine inversion</h3>
+      <p class="tell">Fundus not palpable, a mass at the introitus, hemorrhage with shock out of proportion to blood loss.</p>
+      <ol>
+        <li><b>Stop all uterotonics.</b></li>
+        <li>Relax the uterus: nitroglycerin 50–100 mcg IV, or terbutaline 0.25 mg SC.</li>
+        <li><b>Replace immediately</b> — cup the fundus and push steadily along the axis of the vagina toward the umbilicus. The longer it stays out, the harder it gets.</li>
+        <li>Once replaced, restart uterotonics and keep your hand in place until the uterus contracts around it.</li>
+      </ol>
+    </div>
+
+    <div class="comp">
+      <h3>Eclampsia</h3>
+      <p class="tell">Seizure in pregnancy or up to 6 weeks postpartum. Can present with normal or near-normal pressures.</p>
+      <ol>
+        <li><b>Magnesium sulfate 4–6 g IV</b> over 15–20 min, then 1–2 g/hr. Recurrent seizure → additional 2 g bolus.</li>
+        <li>Left lateral decubitus, airway protection, high-flow O₂.</li>
+        <li>Severe-range BP → labetalol, hydralazine, or nifedipine per the dose table.</li>
+        <li>Watch for magnesium toxicity: loss of deep tendon reflexes first, then respiratory depression. Antidote is calcium gluconate 1 g IV.</li>
+        <li>Definitive treatment is delivery.</li>
+      </ol>
+    </div>
+
+  </div>
+
+  <!-- ================= DOSES ================= -->
+  <h2 class="sec" id="delivery-doses">Doses</h2>
+  <p class="sec-sub">Mother first, then neonate. Contraindications are in red because they are the ones that get missed under pressure.</p>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Mother</caption>
+      <thead><tr><th>Drug</th><th>Dose</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="drug">Oxytocin</td><td class="dose">10 U IM<br>or 20–40 U in 1 L crystalloid IV</td><td>First-line for atony and for routine third stage. Give after delivery of the baby.</td></tr>
+        <tr><td class="drug">Tranexamic acid</td><td class="dose">1 g IV over 10 min</td><td>Within 3 h of onset. Repeat 1 g if bleeding continues at 30 min.</td></tr>
+        <tr><td class="drug">Methylergonovine</td><td class="dose">0.2 mg IM q2–4h</td><td>Second-line uterotonic.<span class="contra">Contraindicated: hypertension, preeclampsia</span></td></tr>
+        <tr><td class="drug">Carboprost</td><td class="dose">250 mcg IM q15–90 min<br>max 2 mg (8 doses)</td><td>Can be given intramyometrially. Expect diarrhea, fever.<span class="contra">Contraindicated: asthma</span></td></tr>
+        <tr><td class="drug">Misoprostol</td><td class="dose">800–1000 mcg PR<br>or 600 mcg SL</td><td>Useful when IV access or refrigerated agents are not available.</td></tr>
+        <tr><td class="drug">Magnesium sulfate</td><td class="dose">4–6 g IV over 15–20 min,<br>then 1–2 g/hr</td><td>Eclampsia and seizure prophylaxis in severe preeclampsia. Recurrent seizure: extra 2 g.</td></tr>
+        <tr><td class="drug">Calcium gluconate</td><td class="dose">1 g IV</td><td>Magnesium toxicity — reflexes gone, respirations depressed.</td></tr>
+        <tr><td class="drug">Labetalol</td><td class="dose">20 mg IV, then 40, then 80<br>max 300 mg</td><td>Severe-range BP. Avoid in asthma, bradycardia, decompensated heart failure.</td></tr>
+        <tr><td class="drug">Hydralazine</td><td class="dose">5–10 mg IV q20 min</td><td>Alternative for severe-range BP.</td></tr>
+        <tr><td class="drug">Nifedipine IR</td><td class="dose">10–20 mg PO q20 min</td><td>Oral option when IV access is delayed.</td></tr>
+        <tr><td class="drug">Terbutaline</td><td class="dose">0.25 mg SC</td><td>Tocolysis for cord prolapse; uterine relaxation for inversion.</td></tr>
+        <tr><td class="drug">Nitroglycerin</td><td class="dose">50–100 mcg IV</td><td>Rapid uterine relaxation for inversion or retained placenta.</td></tr>
+        <tr><td class="drug">Anti-D immune globulin</td><td class="dose">300 mcg IM</td><td>Rh-negative mother, within 72 h.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Neonate</caption>
+      <thead><tr><th>Drug</th><th>Dose</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="drug">Epinephrine</td><td class="dose">0.01–0.03 mg/kg IV / UVC<br>= 0.1–0.3 mL/kg of 0.1 mg/mL</td><td>HR &lt;60 despite effective PPV and compressions. Umbilical vein is the fastest access.</td></tr>
+        <tr><td class="drug">Epinephrine (ETT)</td><td class="dose">0.05–0.1 mg/kg<br>= 0.5–1 mL/kg of 0.1 mg/mL</td><td>Only while access is being obtained. Higher dose, less reliable.</td></tr>
+        <tr><td class="drug">Volume</td><td class="dose">10 mL/kg over 5–10 min</td><td>Normal saline or O-negative blood. For known or suspected blood loss with poor response.</td></tr>
+        <tr><td class="drug">Dextrose 10%</td><td class="dose">2 mL/kg IV</td><td>Documented hypoglycemia. Check glucose on every resuscitated newborn.</td></tr>
+        <tr><td class="drug">Vitamin K</td><td class="dose">1 mg IM<br>0.5 mg if &lt;1500 g</td><td>All newborns, within 6 h.</td></tr>
+        <tr><td class="drug">Erythromycin 0.5% oint.</td><td class="dose">Both eyes, once</td><td>Gonococcal ophthalmia prophylaxis.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ================= SCORES ================= -->
+  <h2 class="sec" id="delivery-scores">Apgar and oxygen targets</h2>
+  <p class="sec-sub">Apgar documents; it does not direct resuscitation. Do not wait for a score to start PPV.</p>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Apgar — 1 min, 5 min, then q5 to 20 min if &lt;7</caption>
+      <thead><tr><th>Sign</th><th class="num">0</th><th class="num">1</th><th class="num">2</th></tr></thead>
+      <tbody>
+        <tr><td class="drug">Appearance</td><td>Blue or pale all over</td><td>Pink body, blue extremities</td><td>Pink all over</td></tr>
+        <tr><td class="drug">Pulse</td><td>Absent</td><td>&lt;100</td><td>&gt;100</td></tr>
+        <tr><td class="drug">Grimace</td><td>No response</td><td>Grimace only</td><td>Cry, cough, sneeze, pulls away</td></tr>
+        <tr><td class="drug">Activity</td><td>Limp</td><td>Some flexion</td><td>Active motion</td></tr>
+        <tr><td class="drug">Respirations</td><td>Absent</td><td>Slow, irregular, weak cry</td><td>Good, strong cry</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Target preductal SpO₂ — probe on the right hand</caption>
+      <thead><tr><th class="num">1 min</th><th class="num">2 min</th><th class="num">3 min</th><th class="num">4 min</th><th class="num">5 min</th><th class="num">10 min</th></tr></thead>
+      <tbody>
+        <tr><td class="num">60–65%</td><td class="num">65–70%</td><td class="num">70–75%</td><td class="num">75–80%</td><td class="num">80–85%</td><td class="num">85–95%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <span class="flag good"><b>Normal fetal heart rate</b>110–160 bpm. Persistent bradycardia below 110 after delivery of the head, or a sudden drop after membranes rupture, should send you looking for a prolapsed cord.</span>
+
+  <!-- ================= EXIT ================= -->
+  <h2 class="sec" id="delivery-exit">Before they leave the department</h2>
+  <p class="sec-sub">Both patients get admitted. This is what gets forgotten in the calm afterward.</p>
+
+  <div class="exit">
+    <section>
+      <h3>Mother</h3>
+      <ul>
+        <li>Fundus firm and at or below the umbilicus, rechecked</li>
+        <li>Estimated blood loss quantified, not eyeballed</li>
+        <li>Perineum, vagina and cervix inspected and repaired or referred</li>
+        <li>Rh status checked → anti-D if negative</li>
+        <li>Placenta inspected and sent</li>
+        <li>Oxytocin infusion running, uterotonics given documented</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Baby</h3>
+      <ul>
+        <li>ID bands on both, matched, before separation</li>
+        <li>Vitamin K IM</li>
+        <li>Erythromycin eye ointment</li>
+        <li>Hepatitis B vaccine</li>
+        <li>Glucose checked, temperature normothermic</li>
+        <li>Weight, Apgars, cord blood sent</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Chart</h3>
+      <ul>
+        <li>Time of delivery, sex, presentation</li>
+        <li>Apgar at 1 and 5 minutes</li>
+        <li>Nuchal cord, meconium, complications and times</li>
+        <li>Every maneuver used, in order, with times — this is the record that matters if there is an injury</li>
+        <li>Who was present and when they arrived</li>
+        <li>Disposition and receiving service for both patients</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    Bedside quick reference for precipitous vaginal delivery in the emergency department. Reflects NRP, ACOG and standard EM practice; verify doses against your own formulary and institutional protocols. Not a substitute for obstetric and neonatal consultation — call both early. Diagrams are original schematics drawn for this card, not reproductions of textbook figures — free to print, post and copy.
+  </footer>
+
+</div>
+</section>
+<section class="view" id="v-chest">
+<div class="wrap">
+
+  <header class="masthead">
+    <h1><span>Emergency Department</span>Tube Thoracostomy</h1>
+    <div class="callout-strip">
+      <b>Confirm the side</b><b>Ultrasound first</b><b>Analgesia is not optional</b><b>Nothing below the nipple line</b>
+    </div>
+    <p class="two-patients">Almost every serious complication of this procedure comes from one of three things: the wrong side, going too low, or never confirming you were in the pleural space. None of those are technique problems. They are checking problems.</p>
+  </header>
+
+  <nav class="jump" aria-label="Section shortcuts">
+    <a href="#chest-decide">Does it need a tube?</a>
+    <a href="#chest-run">The procedure</a>
+    <a href="#chest-wrong">When it goes wrong</a>
+    <a href="#chest-doses">Doses &amp; sizes</a>
+    <a href="#chest-drain">Reading the drain</a>
+    <a href="#chest-exit">Before they leave</a>
+  </nav>
+
+  <!-- ================= GATE ================= -->
+  <section class="gate" id="chest-decide">
+    <h2>Does this need a tube right now? — 3 checks</h2>
+    <div class="gate-grid">
+      <div><strong>Tension</strong>Hypotension, unilateral absent breath sounds, distended neck veins, hypoxia. Decompress now. Do not wait for a film.</div>
+      <div><strong>Unstable</strong>Traumatic haemo- or pneumothorax with any physiological compromise, or a patient going to positive pressure ventilation.</div>
+      <div><strong>Stable and small</strong>Asymptomatic, small, occult on CT. Not every pneumothorax needs a tube. Observation with oxygen is a legitimate plan.</div>
+    </div>
+    <div class="gate-foot">
+      <strong>In arrest or peri-arrest trauma, go straight to finger thoracostomy — bilaterally.</strong> It is faster than a needle, it always reaches the pleura, and it tells you whether there was anything there. A needle that is too short tells you nothing.
+    </div>
+  </section>
+
+  <!-- ================= THE RUN ================= -->
+  <h2 class="sec" id="chest-run">The procedure</h2>
+  <p class="sec-sub">Open technique. Seldinger pigtail steps are called out where they differ.</p>
+
+  <div class="dx-legend">
+    <span><i class="k-red"></i>force you apply</span>
+    <span><i class="k-green"></i>correct position</span>
+    <span><i class="k-x">✕</i>never</span>
+    <em>Diagrams are schematic. They show landmarks and direction of travel, not anatomy.</em>
+  </div>
+
+  <div class="spine">
+
+    <div class="stage">
+      <div class="stage-head"><h3>Pick the tube</h3><span class="clock">before you open anything</span></div>
+      <ul class="steps">
+        <li><b>Air alone:</b> 8–14 Fr pigtail is enough. Bigger tubes hurt more and drain air no better.</li>
+        <li><b>Blood or trauma:</b> 28–32 Fr traditionally. Randomised data support 14 Fr pigtails as non-inferior for traumatic haemothorax — reasonable in a stable patient, less so when you are chasing clot.</li>
+        <li><b>Empyema:</b> 12–14 Fr pigtail plus intrapleural fibrinolytics beats a big tube alone.</li>
+        <li><b>Malignant effusion:</b> pigtail, or refer for an indwelling pleural catheter rather than committing them to an inpatient stay.</li>
+      </ul>
+      <span class="flag watch"><b>Ask first</b>Anticoagulants? Previous thoracic surgery or pleurodesis? Known bullous disease? Any of these changes your approach or your site.</span>
+    </div>
+
+    <div class="stage">
+      <div class="stage-head"><h3>Position and mark</h3><span class="clock">triangle of safety</span></div>
+      <ul class="steps">
+        <li>Supine, head up 30–45°, arm abducted and hand behind the head. This opens the axilla and pulls the scapula back.</li>
+        <li><b>Scan before you cut.</b> Confirm the side, look for lung sliding, find the diaphragm, and identify the liver or spleen so you know where the floor is.</li>
+        <li>Target the <b>4th or 5th intercostal space, mid-axillary line</b> — level with the nipple in men, the inframammary fold in women.</li>
+        <li>Mark the skin. Say the side out loud with a second person and check it against the imaging.</li>
+      </ul>
+      <figure class="dx">
+      <svg class="dx-svg" viewBox="0 0 460 235" role="img" aria-label="Lateral chest with the triangle of safety bounded by pectoralis major anteriorly, latissimus dorsi posteriorly and the nipple line inferiorly, with the insertion point marked in the fourth to fifth intercostal space">
+        <rect x="126" y="6" width="34" height="56" rx="17" fill="#FFFFFF" stroke="#12233A" stroke-width="2"/>
+        <rect x="60" y="56" width="170" height="178" rx="26" fill="#EDEAE5" stroke="#12233A" stroke-width="2.5"/>
+        <polygon points="146,78 86,176 206,176" fill="#0F7B5A" fill-opacity="0.13" stroke="#0F7B5A" stroke-width="2" stroke-dasharray="5 4"/>
+        <line x1="86" y1="176" x2="206" y2="176" stroke="#0F7B5A" stroke-width="2.5"/>
+        <circle cx="146" cy="146" r="9" fill="none" stroke="#C4162B" stroke-width="3"/>
+        <path d="M139 139 L153 153 M153 139 L139 153" stroke="#C4162B" stroke-width="3" stroke-linecap="round"/>
+        <text class="lbl" x="118" y="70">axilla</text>
+        <line x1="62" y1="136" x2="102" y2="136" stroke="#5A6673" stroke-width="1"/>
+        <text class="sm" x="4" y="132">pec major</text>
+        <line x1="248" y1="136" x2="192" y2="136" stroke="#5A6673" stroke-width="1"/>
+        <text class="sm" x="252" y="132">latissimus dorsi</text>
+        <text class="sm" x="80" y="196">nipple line · 5th ICS — the floor</text>
+        <line x1="248" y1="164" x2="158" y2="150" stroke="#5A6673" stroke-width="1"/>
+        <text class="hot" x="252" y="162">4th–5th ICS</text>
+        <text class="sm" x="252" y="180">mid-axillary line</text>
+        <text class="sm hot" x="4" y="224">below the nipple line is the diaphragm, liver and spleen</text>
+      </svg>
+      <figcaption><b>Triangle of safety</b>Everything outside it is somebody else's organ. In expiration the diaphragm rises — a site that looked safe on inspiration may not be.</figcaption>
+      </figure>
+    </div>
+
+    <div class="stage">
+      <div class="stage-head"><h3>Anaesthetise properly</h3><span class="clock">2–5 min, worth every second</span></div>
+      <ul class="steps">
+        <li>This is among the most painful things done to a conscious patient in the department. Under-treating it is the single most common failure of the procedure.</li>
+        <li>Infiltrate in layers: skin, subcutaneous tissue, the <b>periosteum of the rib</b>, and then the <b>parietal pleura</b> — the pleura is the pain, so put the last few millilitres there and wait.</li>
+        <li>Aspirate as you advance. When you draw back air or blood, you are through the pleura — pull back a few millimetres and deposit.</li>
+        <li>Add systemic analgesia. Fentanyl plus ketamine is a reasonable default in a patient who can still protect their airway.</li>
+      </ul>
+    </div>
+
+    <div class="stage">
+      <div class="stage-head"><h3>Incision and tract</h3><span class="clock">over the top of the rib</span></div>
+      <ul class="steps">
+        <li>2–3 cm transverse incision <b>directly over the rib below your target space</b>, parallel to the ribs.</li>
+        <li>Blunt dissect with a large curved clamp, spreading in the plane of the intercostal muscles, walking <b>over the superior border of the rib</b>. The neurovascular bundle runs in the groove under each rib.</li>
+        <li>Push the closed tip through the parietal pleura with controlled force, then spread. Expect a rush of air or blood.</li>
+        <li><b>Seldinger:</b> introducer needle over the rib, aspirate to confirm, wire, small skin nick, dilate the tract, then the catheter over the wire. Never advance the dilator further than the tract you need.</li>
+      </ul>
+      <figure class="dx">
+      <svg class="dx-svg" viewBox="0 0 460 200" role="img" aria-label="Cross-section of two ribs showing the vein, artery and nerve running in the groove beneath the upper rib, with the correct tract passing over the superior border of the lower rib">
+        <ellipse cx="170" cy="56" rx="72" ry="18" fill="#EDEAE5" stroke="#12233A" stroke-width="2.5"/>
+        <ellipse cx="170" cy="150" rx="72" ry="18" fill="#EDEAE5" stroke="#12233A" stroke-width="2.5"/>
+        <circle cx="140" cy="80" r="6" fill="#12233A"/>
+        <circle cx="158" cy="80" r="6" fill="#C4162B"/>
+        <circle cx="176" cy="80" r="6" fill="#B96B00"/>
+        <text class="sm" x="190" y="84">V · A · N</text>
+        <line x1="52" y1="176" x2="160" y2="130" stroke="#0F7B5A" stroke-width="4" marker-end="url(#aGreen)"/>
+        <line x1="52" y1="96" x2="120" y2="84" stroke="#C4162B" stroke-width="3.5" marker-end="url(#aRed)"/>
+        <path d="M76 82 L96 100 M96 82 L76 100" stroke="#C4162B" stroke-width="4" stroke-linecap="round"/>
+        <text class="sm hot" x="4" y="66">never scrape the</text>
+        <text class="sm hot" x="4" y="80">underside of the rib above</text>
+        <text class="sm ok" x="4" y="196">walk over the TOP of the lower rib</text>
+        <text class="sm" x="266" y="146">the bundle sits in the groove</text>
+        <text class="sm" x="266" y="162">beneath every rib — aim low</text>
+        <text class="sm" x="266" y="178">in the space, not high</text>
+      </svg>
+      <figcaption><b>Over the top</b>Intercostal arteries bleed briskly and are miserable to control through a small hole. Keep the clamp hugging bone.</figcaption>
+      </figure>
+    </div>
+
+    <div class="stage">
+      <div class="stage-head"><h3>Finger sweep</h3><span class="clock">before any tube goes in</span></div>
+      <ul class="steps">
+        <li>Gloved finger into the tract and sweep a full circle. This is the step people skip and the step that prevents the disasters.</li>
+        <li>You are confirming four things: you are inside the pleural space, the lung is there and moving, there are no adhesions in the way, and there is no liver or spleen under your fingertip.</li>
+        <li>Break down any adhesions you meet. If you feel solid organ, stop and reassess your level.</li>
+      </ul>
+      <figure class="dx">
+      <svg class="dx-svg" viewBox="0 0 460 200" role="img" aria-label="A finger passing through the chest wall into the pleural space, sweeping a full circle to confirm position and break adhesions">
+        <rect x="104" y="16" width="44" height="70" rx="6" fill="#EDEAE5" stroke="#12233A" stroke-width="2.5"/>
+        <rect x="104" y="126" width="44" height="60" rx="6" fill="#EDEAE5" stroke="#12233A" stroke-width="2.5"/>
+        <text class="lbl" x="60" y="12">chest wall</text>
+        <rect x="14" y="92" width="162" height="28" rx="14" fill="#FFFFFF" stroke="#12233A" stroke-width="2.5"/>
+        <ellipse cx="320" cy="106" rx="72" ry="66" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <text class="lbl" x="300" y="110">lung</text>
+        <path d="M212 62 A44 44 0 1 1 190 92" fill="none" stroke="#0F7B5A" stroke-width="3.5" marker-end="url(#aGreen)"/>
+        <path d="M196 150 C216 142 236 148 252 140" fill="none" stroke="#C4162B" stroke-width="3" stroke-linecap="round"/>
+        <text class="sm hot" x="196" y="176">break adhesions</text>
+        <text class="sm ok" x="186" y="42">sweep a full 360°</text>
+        <text class="sm" x="14" y="196">feel lung, not liver</text>
+      </svg>
+      <figcaption><b>Finger sweep</b>Thirty seconds here is what stops a tube ending up in the abdomen, the fissure, or the lung parenchyma.</figcaption>
+      </figure>
+    </div>
+
+    <div class="stage">
+      <div class="stage-head"><h3>Tube and connect</h3><span class="clock">all holes inside</span></div>
+      <ul class="steps">
+        <li>Clamp the tip, guide it along your finger, then release and direct it: <b>apical and posterior for air, posterior and basal for fluid</b>.</li>
+        <li>Advance until <b>every fenestration is inside the pleural space</b> — the last side hole sitting in the chest wall gives you subcutaneous emphysema and a tube that will not drain.</li>
+        <li>Connect to the drainage system. Look for fogging, tidaling, and an initial swing or rush.</li>
+        <li>Secure with a simple anchoring stitch and a separate loose closing stitch. <b>No purse-string</b> — it causes necrosis and an ugly scar without improving the seal.</li>
+        <li>Occlusive dressing, tape the connection, and get a chest film.</li>
+      </ul>
+      <figure class="dx">
+      <svg class="dx-svg" viewBox="0 0 460 230" role="img" aria-label="Lateral chest showing a tube directed apically and posteriorly for air and a second tube directed to the posterior base for fluid">
+        <path d="M150 24 C86 54 82 196 150 216 L300 216 C368 196 364 54 300 24 Z" fill="#F1EEE9" stroke="#12233A" stroke-width="2.5"/>
+        <path d="M112 182 Q226 208 338 180" fill="none" stroke="#12233A" stroke-width="2" stroke-dasharray="6 5"/>
+        <text class="lbl" x="188" y="204">diaphragm</text>
+        <path d="M364 116 C316 96 262 70 222 52" fill="none" stroke="#0F7B5A" stroke-width="7" stroke-linecap="round"/>
+        <path d="M364 122 C318 146 268 172 224 178" fill="none" stroke="#5A6673" stroke-width="7" stroke-linecap="round" stroke-dasharray="12 7"/>
+        <circle cx="222" cy="52" r="6" fill="#0F7B5A"/>
+        <circle cx="224" cy="178" r="6" fill="#5A6673"/>
+        <rect x="352" y="108" width="9" height="22" rx="3" fill="#C4162B"/>
+        <text class="sm ok" x="122" y="44">air → apex, posterior</text>
+        <text class="sm" x="122" y="166">fluid → base, posterior</text>
+        <text class="sm hot" x="4" y="110">last side hole</text>
+        <text class="sm hot" x="4" y="124">inside the wall</text>
+        <line x1="92" y1="118" x2="346" y2="118" stroke="#C4162B" stroke-width="1" stroke-dasharray="3 3"/>
+      </svg>
+      <figcaption><b>Direction</b>Air rises, fluid falls. In a supine trauma patient blood collects posteriorly, so a tube aimed straight laterally will sit above the collection and drain nothing.</figcaption>
+      </figure>
+    </div>
+
+    <div class="stage">
+      <div class="stage-head"><h3>Removal</h3><span class="clock">when criteria are met</span></div>
+      <ul class="steps">
+        <li>Criteria: no air leak, lung fully expanded on film, drainage below roughly 200 mL per day, and no ongoing indication.</li>
+        <li>Have the patient hold at <b>end-expiration or Valsalva</b>. Remove briskly in one movement and seal immediately with an occlusive dressing.</li>
+        <li>Repeat film afterwards. A small recurrence is common and usually does not need a new tube.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ================= NEVER ================= -->
+  <h2 class="sec">Hard stops</h2>
+  <p class="sec-sub">Short list. Each one has killed someone.</p>
+  <div class="never">
+    <h3>Never</h3>
+    <ul>
+      <li><b>Never go below the nipple line</b> — that is diaphragm, liver and spleen.</li>
+      <li><b>Never use a trocar.</b> There is no situation where it is the right tool.</li>
+      <li><b>Never clamp a bubbling tube</b> — you have just made a tension pneumothorax.</li>
+      <li><b>Never insert without confirming the side</b> against imaging and a second person.</li>
+      <li><b>Never skip the finger sweep</b> on an open technique.</li>
+      <li><b>Never drain a huge chronic effusion fast</b> — re-expansion oedema.</li>
+      <li><b>Never wait for a film</b> in a tensioning patient.</li>
+      <li><b>Never leave a side hole outside</b> the pleural space.</li>
+    </ul>
+  </div>
+
+  <!-- ================= COMPLICATIONS ================= -->
+  <h2 class="sec" id="chest-wrong">When it goes wrong</h2>
+  <p class="sec-sub">Work through these in order — most are mechanical before they are pathological.</p>
+
+  <div class="bank">
+
+    <div class="comp">
+      <h3>Continuous bubbling</h3>
+      <p class="tell">Bubbling through the water seal that does not stop between breaths. An air leak somewhere between alveolus and canister.</p>
+      <ol>
+        <li><b>Start outside and work in.</b> Check every connection and the canister itself first — loose connections are the commonest cause.</li>
+        <li>Briefly occlude the tube at the skin. If the bubbling stops, the leak is in the patient. If it continues, the leak is in your tubing.</li>
+        <li>Check that no fenestration is sitting outside the chest wall — look at the film, feel the tube.</li>
+        <li>Persistent large leak with poor expansion → suspect bronchopleural fistula or tracheobronchial injury. Call thoracic surgery.</li>
+      </ol>
+    </div>
+
+    <div class="comp">
+      <h3>Nothing draining, no tidaling</h3>
+      <p class="tell">A still water seal column. Either the tube is blocked, or the pleural space is empty.</p>
+      <ol>
+        <li>Look at the tube along its whole length for kinks, and under the patient for a compressed segment.</li>
+        <li>Milk the tube gently for clot. Do not strip aggressively — the negative pressure generated is enormous.</li>
+        <li>Get a film. Malposition in the fissure, in the soft tissues, or partly withdrawn all look like this.</li>
+        <li>If the film shows a fully expanded lung and the patient is well, the tube has simply finished its job.</li>
+      </ol>
+    </div>
+
+    <div class="comp">
+      <h3>Massive haemothorax</h3>
+      <p class="tell">Big immediate output or ongoing brisk bleeding. This is a surgical decision, and it is time-critical.</p>
+      <ol>
+        <li><b>&gt;1500 mL immediately</b> on insertion, or</li>
+        <li><b>&gt;200 mL/hr for 2–4 hours</b>, or</li>
+        <li>ongoing transfusion requirement with haemodynamic instability.</li>
+        <li>Any of these → thoracotomy. Call surgery while the tube is still going in, not after.</li>
+        <li>Activate massive transfusion, warm everything, and do not autotransfuse into a coagulopathy without a plan.</li>
+      </ol>
+    </div>
+
+    <div class="comp">
+      <h3>Re-expansion pulmonary oedema</h3>
+      <p class="tell">Cough, breathlessness and hypoxia during or shortly after drainage. Usually the side you just drained.</p>
+      <ol>
+        <li>Highest risk with large volumes, lungs collapsed for more than 72 hours, and young patients.</li>
+        <li><b>Clamp after 1–1.5 L</b> and wait an hour before draining more. Stop early for chest tightness or cough.</li>
+        <li>Treatment is supportive: oxygen, non-invasive or invasive ventilation as needed. Diuretics do not help and can harm.</li>
+        <li>Most resolve within 24–48 hours, but it can be fatal.</li>
+      </ol>
+    </div>
+
+    <div class="comp">
+      <h3>Subcutaneous emphysema</h3>
+      <p class="tell">Crackling tissue spreading across the chest wall, neck and face.</p>
+      <ol>
+        <li>Usually a side hole outside the pleura, an occluded tube with an ongoing leak, or a tube too small for the leak.</li>
+        <li>Check patency and position first; reposition or upsize rather than adding suction blindly.</li>
+        <li>Watch the airway if it reaches the neck and face. Rapidly progressive emphysema needs an urgent airway assessment.</li>
+        <li>Rarely needs specific treatment beyond fixing the drainage.</li>
+      </ol>
+    </div>
+
+    <div class="comp">
+      <h3>Tube falls out</h3>
+      <p class="tell">Partial or complete dislodgement, often when the patient is moved.</p>
+      <ol>
+        <li><b>Do not push it back in.</b> The external portion is contaminated.</li>
+        <li>Cover the site with an occlusive dressing taped on three sides so air can escape but not enter.</li>
+        <li>Reassess clinically and with a film. If there is still an indication, place a new tube through a fresh site.</li>
+        <li>Watch closely for tension in the interval, particularly if the patient is on positive pressure.</li>
+      </ol>
+    </div>
+
+  </div>
+
+  <!-- ================= DOSES ================= -->
+  <h2 class="sec" id="chest-doses">Doses and sizes</h2>
+  <p class="sec-sub">Local anaesthetic maxima matter here because the volumes needed are large.</p>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Drugs</caption>
+      <thead><tr><th>Drug</th><th>Dose</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="drug">Lidocaine 1% with epi</td><td class="dose">max 7 mg/kg<br>1% = 10 mg/mL</td><td>70 kg → up to ~49 mL. In practice 20–30 mL infiltrated in layers is plenty. Save the last few mL for the parietal pleura.</td></tr>
+        <tr><td class="drug">Lidocaine 1% plain</td><td class="dose">max 5 mg/kg</td><td>70 kg → up to ~35 mL.<span class="contra">Watch total dose if already given elsewhere</span></td></tr>
+        <tr><td class="drug">Bupivacaine 0.25%</td><td class="dose">max 2 mg/kg<br>3 mg/kg with epi</td><td>Longer duration for the hours after insertion. Slower onset.</td></tr>
+        <tr><td class="drug">Fentanyl</td><td class="dose">1 mcg/kg IV, titrate</td><td>Give before you start, not when they begin to complain.</td></tr>
+        <tr><td class="drug">Ketamine</td><td class="dose">0.3–0.5 mg/kg IV analgesic<br>1–1.5 mg/kg IV dissociative</td><td>Preserves respiratory drive. Good choice in the shocked trauma patient.</td></tr>
+        <tr><td class="drug">Cefazolin</td><td class="dose">2 g IV<br>3 g if &gt;120 kg</td><td>Single dose around insertion for trauma tubes. Not indicated for spontaneous pneumothorax.</td></tr>
+        <tr><td class="drug">Alteplase + dornase</td><td class="dose">10 mg + 5 mg intrapleural<br>twice daily × 3 days</td><td>Complicated parapneumonic effusion or empyema. Give together, not either alone.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Tube selection</caption>
+      <thead><tr><th>Indication</th><th>Size</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="drug">Pneumothorax</td><td class="dose">8–14 Fr pigtail</td><td>Equivalent to large bore for air, markedly less painful.</td></tr>
+        <tr><td class="drug">Traumatic haemothorax</td><td class="dose">28–32 Fr<br>or 14 Fr pigtail</td><td>Randomised data support pigtails as non-inferior. Prefer large bore where clot burden is likely.</td></tr>
+        <tr><td class="drug">Empyema</td><td class="dose">12–14 Fr pigtail</td><td>Combine with fibrinolytics. Big tubes alone do not do better.</td></tr>
+        <tr><td class="drug">Malignant effusion</td><td class="dose">10–14 Fr</td><td>Consider an indwelling pleural catheter instead of admission.</td></tr>
+        <tr><td class="drug">Needle decompression</td><td class="dose">14 G, ≥ 5 cm</td><td>Standard 5 cm catheters fail in a substantial minority of adults. 5th ICS anterior axillary beats 2nd ICS midclavicular.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <figure class="dx">
+  <svg class="dx-svg" viewBox="0 0 460 215" role="img" aria-label="Anterior chest showing the second intercostal space midclavicular site and the preferred fifth intercostal space anterior axillary site for needle decompression">
+    <rect x="60" y="30" width="200" height="170" rx="30" fill="#EDEAE5" stroke="#12233A" stroke-width="2.5"/>
+    <path d="M74 52 Q112 40 150 50" fill="none" stroke="#12233A" stroke-width="3"/>
+    <path d="M246 52 Q208 40 170 50" fill="none" stroke="#12233A" stroke-width="3"/>
+    <line x1="112" y1="44" x2="112" y2="192" stroke="#5A6673" stroke-width="1" stroke-dasharray="5 4"/>
+    <line x1="76" y1="60" x2="76" y2="192" stroke="#5A6673" stroke-width="1" stroke-dasharray="5 4"/>
+    <circle cx="112" cy="112" r="4" fill="#12233A"/>
+    <circle cx="208" cy="112" r="4" fill="#12233A"/>
+    <circle cx="112" cy="74" r="9" fill="#B96B00"/>
+    <circle cx="76" cy="124" r="9" fill="#0F7B5A"/>
+    <line x1="276" y1="70" x2="126" y2="74" stroke="#5A6673" stroke-width="1"/>
+    <text class="sm" x="280" y="66">2nd ICS · midclavicular</text>
+    <text class="sm" x="280" y="82">fails if the catheter is short</text>
+    <line x1="276" y1="128" x2="90" y2="124" stroke="#5A6673" stroke-width="1"/>
+    <text class="sm ok" x="280" y="124">5th ICS · anterior axillary</text>
+    <text class="sm" x="280" y="140">thinner wall — preferred</text>
+    <text class="sm hot" x="12" y="210">in arrest: finger thoracostomy, both sides, no needle</text>
+  </svg>
+  <figcaption><b>Decompression sites</b>Chest wall thickness at the second interspace defeats a standard cannula in a large minority of adults. The lateral site is thinner and closer to where the air actually is.</figcaption>
+  </figure>
+
+  <!-- ================= DRAIN ================= -->
+  <h2 class="sec" id="chest-drain">Reading the drain</h2>
+  <p class="sec-sub">Three chambers, three questions: how much, is it patent, is there a leak.</p>
+
+  <figure class="dx">
+  <svg class="dx-svg" viewBox="0 0 460 215" role="img" aria-label="Three-chamber chest drainage system showing the collection chamber, water seal chamber and suction control chamber with their interpretation">
+    <path d="M6 68 H30" stroke="#8C97A3" stroke-width="7" stroke-linecap="round"/>
+    <text class="sm" x="4" y="56">from patient</text>
+    <rect x="30" y="50" width="110" height="120" rx="3" fill="#FFFFFF" stroke="#12233A" stroke-width="2"/>
+    <rect x="32" y="136" width="106" height="32" fill="#F3C6CC"/>
+    <line x1="30" y1="80" x2="52" y2="80" stroke="#5A6673"/><line x1="30" y1="100" x2="52" y2="100" stroke="#5A6673"/>
+    <line x1="30" y1="120" x2="52" y2="120" stroke="#5A6673"/><line x1="30" y1="140" x2="52" y2="140" stroke="#5A6673"/>
+    <rect x="154" y="50" width="110" height="120" rx="3" fill="#FFFFFF" stroke="#12233A" stroke-width="2"/>
+    <rect x="156" y="120" width="106" height="48" fill="#E1E7EC"/>
+    <path d="M186 52 V140 H228 V52" fill="none" stroke="#12233A" stroke-width="2"/>
+    <circle cx="207" cy="132" r="5" fill="none" stroke="#12233A" stroke-width="1.5"/>
+    <circle cx="196" cy="118" r="4" fill="none" stroke="#12233A" stroke-width="1.5"/>
+    <circle cx="216" cy="110" r="3" fill="none" stroke="#12233A" stroke-width="1.5"/>
+    <rect x="278" y="50" width="110" height="120" rx="3" fill="#FFFFFF" stroke="#12233A" stroke-width="2"/>
+    <rect x="280" y="110" width="106" height="58" fill="#E1E7EC"/>
+    <line x1="296" y1="110" x2="370" y2="110" stroke="#C4162B" stroke-width="2" stroke-dasharray="4 3"/>
+    <text class="sm hot" x="300" y="104">−20 cm H₂O</text>
+    <text class="lbl" x="46" y="190">collection</text>
+    <text class="sm" x="34" y="206">how much, how fast</text>
+    <text class="lbl" x="174" y="190">water seal</text>
+    <text class="sm" x="156" y="206">tidal = patent · bubbling = leak</text>
+    <text class="lbl" x="300" y="190">suction control</text>
+    <text class="sm" x="292" y="206">set the level, not the flow</text>
+    <text class="sm ok" x="400" y="70">one-way</text>
+    <text class="sm ok" x="400" y="84">valve</text>
+  </svg>
+  <figcaption><b>Three chambers</b>Swinging with respiration means the tube is patent and connected to the pleural space. Bubbling only on cough is a small leak. Bubbling throughout the cycle is a real one.</figcaption>
+  </figure>
+
+  <span class="flag good"><b>Normal expectations</b>An initial rush, then swinging with respiration, then a slow tail-off. Output that stops abruptly in the first hours is a blocked tube until proven otherwise.</span>
+
+  <!-- ================= EXIT ================= -->
+  <h2 class="sec" id="chest-exit">Before they leave the department</h2>
+  <p class="sec-sub">Most of these take seconds and are the difference between a good tube and a callback.</p>
+
+  <div class="exit">
+    <section>
+      <h3>Confirm</h3>
+      <ul>
+        <li>Chest film reviewed by you, not just ordered</li>
+        <li>Tube position and all fenestrations intrapleural</li>
+        <li>Lung re-expanded, or a reason why not</li>
+        <li>Tidaling present, leak status documented</li>
+        <li>Initial output volume and character recorded</li>
+        <li>Suction level set and stated in the notes</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Secure</h3>
+      <ul>
+        <li>Anchoring suture placed, no purse-string</li>
+        <li>Occlusive dressing and taped connections</li>
+        <li>Canister below the level of the chest, upright</li>
+        <li>Clamps at the bedside for disconnection only</li>
+        <li>Patient told not to lie on the tubing</li>
+        <li>Ongoing analgesia prescribed, not just given once</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Chart</h3>
+      <ul>
+        <li>Side, site, size, technique, and who did it</li>
+        <li>Consent and time out, including side confirmation</li>
+        <li>Anaesthetic type and total dose</li>
+        <li>Immediate output and any complication</li>
+        <li>Antibiotic given or explicitly not indicated</li>
+        <li>Receiving team notified and criteria for escalation</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    Bedside quick reference for tube thoracostomy in the emergency department. Reflects ATLS, BTS and standard EM practice; verify doses and tube selection against your own formulary and institutional protocols. Not a substitute for surgical consultation. Diagrams are original schematics drawn for this card, not reproductions of textbook figures — free to print, post and copy.
+  </footer>
+
+</div>
+</section>
+<section class="view" id="v-cric">
+<div class="wrap">
+
+  <header class="masthead">
+    <h1><span>Emergency Department · CICO</span>Cricothyrotomy</h1>
+    <div class="callout-strip">
+      <b>Declare it out loud</b><b>Scalpel · finger · bougie</b><b>6.0 cuffed tube</b><b>Under 30 seconds</b>
+    </div>
+    <p class="two-patients">People do not die of a difficult cricothyrotomy. They die of a late one. The technical steps take under a minute to learn and under thirty seconds to perform — the hard part is saying the words "this is a can't intubate, can't oxygenate situation" while there is still time for them to matter.</p>
+  </header>
+
+  <nav class="jump" aria-label="Section shortcuts">
+    <a href="#cric-declare">Is this CICO?</a>
+    <a href="#cric-run">The procedure</a>
+    <a href="#cric-wrong">When it goes wrong</a>
+    <a href="#cric-doses">Kit &amp; drugs</a>
+    <a href="#cric-peds">Children</a>
+    <a href="#cric-exit">Afterwards</a>
+  </nav>
+
+  <!-- ================= GATE ================= -->
+  <section class="gate" id="cric-declare">
+    <h2>Is this CICO? — 3 failures</h2>
+    <div class="gate-grid">
+      <div><strong>Intubation failed</strong>Best attempt by the best operator available, with optimal position and a bougie. Not four attempts by four people.</div>
+      <div><strong>Supraglottic failed</strong>A correctly sized device, correctly seated, does not deliver ventilation.</div>
+      <div><strong>Face mask failed</strong>Two-person technique, adjuncts in, jaw thrust, and you still cannot oxygenate.</div>
+    </div>
+    <div class="gate-foot">
+      <strong>All three failed means you are already behind.</strong> Do not wait for the saturation to bottom out or for someone senior to arrive. Declare it, hand the mask to someone else so oxygenation continues, and go to the neck.
+    </div>
+  </section>
+
+  <!-- ================= THE RUN ================= -->
+  <h2 class="sec" id="cric-run">The procedure</h2>
+  <p class="sec-sub">Scalpel, finger, bougie. Four pieces of kit and one continuous movement.</p>
+
+  <div class="dx-legend">
+    <span><i class="k-red"></i>force you apply</span>
+    <span><i class="k-green"></i>correct position</span>
+    <span><i class="k-x">✕</i>never</span>
+    <em>Diagrams are schematic. They show landmarks and direction of travel, not anatomy.</em>
+  </div>
+
+  <div class="spine">
+
+    <div class="stage">
+      <div class="stage-head"><h3>Declare and position</h3><span class="clock">seconds, not minutes</span></div>
+      <ul class="steps">
+        <li>Say it in plain words: <b>"This is a CICO situation. I am performing a cricothyrotomy."</b> This is not ceremony — it stops the room from continuing to attempt intubation around you.</li>
+        <li>Assign roles out loud: one person keeps oxygenating, one hands you kit, one watches the clock and the monitor.</li>
+        <li><b>Extend the neck</b> and put a roll under the shoulders. If there is a cervical spine concern, the airway still wins.</li>
+        <li>Stand on the patient's side at the level of the shoulder, dominant hand free.</li>
+        <li>Keep oxygen flowing throughout: nasal cannula at 15 L, mask or supraglottic left in place.</li>
+      </ul>
+      <span class="flag stop"><b>The actual failure mode</b>Continuing to attempt intubation after CICO has been reached. If you have declared it, the laryngoscope goes down and stays down.</span>
+      <figure class="dx">
+      <svg class="dx-svg" viewBox="0 0 460 322" role="img" aria-label="Decision flow from triple airway failure through declaring the emergency to scalpel finger bougie technique and confirmation with capnography">
+        <rect x="18" y="8" width="282" height="46" rx="3" fill="#FFFFFF" stroke="#D6D2CB" stroke-width="1.5"/>
+        <text x="159" y="29" text-anchor="middle">Failed laryngoscopy · failed SGA</text>
+        <text x="159" y="46" text-anchor="middle">· failed face-mask ventilation</text>
+        <line x1="159" y1="54" x2="159" y2="70" stroke="#C4162B" stroke-width="2" marker-end="url(#aRed)"/>
+        <rect x="18" y="74" width="282" height="42" rx="3" fill="#FCEEF0" stroke="#C4162B" stroke-width="1.5"/>
+        <text x="159" y="95" text-anchor="middle">Declare it: this is CICO</text>
+        <text class="sm" x="159" y="111" text-anchor="middle">say it out loud · assign roles</text>
+        <line x1="159" y1="116" x2="159" y2="132" stroke="#12233A" stroke-width="2" marker-end="url(#aInk)"/>
+        <rect x="18" y="136" width="282" height="46" rx="3" fill="#FFFFFF" stroke="#D6D2CB" stroke-width="1.5"/>
+        <text x="159" y="157" text-anchor="middle">Extend neck · laryngeal handshake</text>
+        <text class="sm" x="159" y="174" text-anchor="middle">stabilise the larynx and do not let go</text>
+        <line x1="300" y1="159" x2="310" y2="159" stroke="#B96B00" stroke-width="2" marker-end="url(#aInk)"/>
+        <rect x="318" y="138" width="134" height="46" rx="3" fill="#FDF3E2" stroke="#B96B00" stroke-width="1.5"/>
+        <text class="sm" x="385" y="156" text-anchor="middle">impalpable →</text>
+        <text class="sm" x="385" y="170" text-anchor="middle">vertical midline</text>
+        <text class="sm" x="385" y="182" text-anchor="middle">incision, then finger</text>
+        <line x1="159" y1="182" x2="159" y2="198" stroke="#12233A" stroke-width="2" marker-end="url(#aInk)"/>
+        <rect x="18" y="202" width="282" height="42" rx="3" fill="#FCEEF0" stroke="#C4162B" stroke-width="1.5"/>
+        <text x="159" y="228" text-anchor="middle">Scalpel · finger · bougie</text>
+        <line x1="159" y1="244" x2="159" y2="260" stroke="#12233A" stroke-width="2" marker-end="url(#aInk)"/>
+        <rect x="18" y="264" width="282" height="46" rx="3" fill="#FFFFFF" stroke="#D6D2CB" stroke-width="1.5"/>
+        <text x="159" y="285" text-anchor="middle">6.0 cuffed tube, shallow</text>
+        <text class="sm" x="159" y="302" text-anchor="middle">inflate cuff · ventilate</text>
+        <line x1="300" y1="287" x2="310" y2="287" stroke="#0F7B5A" stroke-width="2" marker-end="url(#aGreen)"/>
+        <rect x="318" y="266" width="134" height="46" rx="3" fill="#E9F5F0" stroke="#0F7B5A" stroke-width="1.5"/>
+        <text class="sm ok" x="385" y="286" text-anchor="middle">confirm with</text>
+        <text class="sm ok" x="385" y="302" text-anchor="middle">waveform capnography</text>
+      </svg>
+      <figcaption><b>The whole plan</b>Five steps. Rehearse the words as much as the technique — the declaration is the intervention that saves the most lives here.</figcaption>
+      </figure>
+    </div>
+
+    <div class="stage">
+      <div class="stage-head"><h3>Find the membrane</h3><span class="clock">laryngeal handshake</span></div>
+      <ul class="steps">
+        <li>Non-dominant hand: thumb and middle finger on either side of the upper larynx, index finger free. Rock the larynx gently side to side to feel its shape.</li>
+        <li>Walk the index finger down the midline over the thyroid lamina until it drops into the soft gap below the thyroid cartilage and above the cricoid ring. That gap is the <b>cricothyroid membrane</b> — roughly a centimetre tall and two to three wide.</li>
+        <li><b>Once you have it, that hand does not move again</b> until the tube is in. Everything else happens around it.</li>
+        <li>If you genuinely cannot feel it, do not keep palpating. Go straight to the vertical incision described below.</li>
+      </ul>
+      <figure class="dx">
+      <svg class="dx-svg" viewBox="0 0 460 250" role="img" aria-label="Anterior laryngeal anatomy showing the hyoid, thyroid cartilage, cricothyroid membrane, cricoid ring, tracheal rings and the thyroid isthmus below">
+        <path d="M108 46 Q168 26 228 46" fill="none" stroke="#12233A" stroke-width="8" stroke-linecap="round"/>
+        <polygon points="112,64 224,64 224,116 168,136 112,116" fill="#EDEAE5" stroke="#12233A" stroke-width="2.5"/>
+        <path d="M156 64 L168 78 L180 64" fill="none" stroke="#12233A" stroke-width="2"/>
+        <rect x="140" y="140" width="56" height="20" rx="3" fill="#0F7B5A" fill-opacity="0.22" stroke="#0F7B5A" stroke-width="2.5"/>
+        <rect x="126" y="164" width="84" height="22" rx="11" fill="#EDEAE5" stroke="#12233A" stroke-width="2.5"/>
+        <rect x="132" y="192" width="72" height="12" rx="6" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <rect x="132" y="210" width="72" height="12" rx="6" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <rect x="116" y="204" width="104" height="20" rx="10" fill="#FDF3E2" fill-opacity="0.85" stroke="#B96B00" stroke-width="2"/>
+        <line x1="248" y1="42" x2="230" y2="42" stroke="#5A6673" stroke-width="1"/>
+        <text class="sm" x="252" y="46">hyoid</text>
+        <line x1="248" y1="94" x2="228" y2="94" stroke="#5A6673" stroke-width="1"/>
+        <text class="sm" x="252" y="98">thyroid cartilage</text>
+        <line x1="248" y1="150" x2="200" y2="150" stroke="#0F7B5A" stroke-width="1.5"/>
+        <text class="ok" x="252" y="146">cricothyroid membrane</text>
+        <text class="sm" x="252" y="164">your target · about 1 cm tall</text>
+        <line x1="248" y1="176" x2="214" y2="176" stroke="#5A6673" stroke-width="1"/>
+        <text class="sm" x="252" y="180">cricoid ring</text>
+        <line x1="248" y1="214" x2="224" y2="214" stroke="#B96B00" stroke-width="1"/>
+        <text class="sm" x="252" y="218">thyroid isthmus — stay above it</text>
+        <text class="sm" x="10" y="240">stabilise here and never let go</text>
+      </svg>
+      <figcaption><b>Laryngeal handshake</b>The membrane is a soft dip between two hard landmarks. If what you are on feels like a firm ring, you have gone one level too low.</figcaption>
+      </figure>
+    </div>
+
+    <div class="stage">
+      <div class="stage-head"><h3>Scalpel, then bougie</h3><span class="clock">one continuous movement</span></div>
+      <ul class="steps">
+        <li><b>Stab</b> a #10 blade transversely through skin and membrane in one motion. Commit — a timid incision that stops in the subcutaneous tissue costs you the landmark and fills the field with blood.</li>
+        <li><b>Rotate the blade 90°</b> so the sharp edge points towards the feet. The blade now holds the hole open for you.</li>
+        <li><b>Slide the bougie</b> along the caudal side of the blade, angled towards the feet, into the trachea. Tracheal clicks or a distal hold-up tell you that you are in the airway and not in a pretracheal plane.</li>
+        <li>Only now remove the scalpel. Keep the bougie and your stabilising hand exactly where they are.</li>
+      </ul>
+      <figure class="dx">
+      <svg class="dx-svg" viewBox="0 0 460 195" role="img" aria-label="Three frames: transverse stab through skin and membrane, rotation of the blade ninety degrees with the sharp edge caudal, and the bougie sliding along the blade into the trachea">
+        <rect x="68" y="20" width="26" height="96" fill="#FFFFFF"/>
+        <rect x="94" y="20" width="12" height="96" rx="4" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <rect x="54" y="20" width="14" height="40" rx="4" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <rect x="54" y="76" width="14" height="40" rx="4" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <rect x="54" y="60" width="14" height="16" fill="#0F7B5A" fill-opacity="0.3" stroke="#0F7B5A" stroke-width="2"/>
+        <rect x="6" y="62" width="26" height="10" rx="3" fill="#12233A"/>
+        <polygon points="32,62 62,64 62,72 32,72" fill="#B9C2CB" stroke="#12233A" stroke-width="1.5"/>
+        <text class="sm hot" x="78" y="146" text-anchor="middle">1 · stab through skin</text>
+        <text class="sm" x="78" y="162" text-anchor="middle">and membrane</text>
+
+        <rect x="220" y="20" width="26" height="96" fill="#FFFFFF"/>
+        <rect x="246" y="20" width="12" height="96" rx="4" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <rect x="206" y="20" width="14" height="40" rx="4" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <rect x="206" y="76" width="14" height="40" rx="4" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <rect x="210" y="30" width="9" height="26" fill="#12233A"/>
+        <rect x="210" y="56" width="9" height="30" fill="#B9C2CB" stroke="#12233A" stroke-width="1.5"/>
+        <line x1="209" y1="87" x2="220" y2="87" stroke="#C4162B" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M174 44 A28 28 0 0 1 202 34" fill="none" stroke="#0F7B5A" stroke-width="3.5" marker-end="url(#aGreen)"/>
+        <text class="sm ok" x="230" y="146" text-anchor="middle">2 · rotate 90°</text>
+        <text class="sm" x="230" y="162" text-anchor="middle">sharp edge to the feet</text>
+
+        <rect x="372" y="20" width="26" height="96" fill="#FFFFFF"/>
+        <rect x="398" y="20" width="12" height="96" rx="4" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <rect x="358" y="20" width="14" height="40" rx="4" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <rect x="358" y="76" width="14" height="40" rx="4" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <rect x="362" y="34" width="8" height="46" fill="#B9C2CB" stroke="#12233A" stroke-width="1.5"/>
+        <path d="M310 74 H376 Q386 74 386 86 V116" fill="none" stroke="#8C97A3" stroke-width="5" stroke-linecap="round" marker-end="url(#aGreen)"/>
+        <text class="sm ok" x="382" y="146" text-anchor="middle">3 · bougie along</text>
+        <text class="sm" x="382" y="162" text-anchor="middle">the caudal blade</text>
+        <text class="sm" x="6" y="188">green band = cricothyroid membrane · grey column = posterior wall</text>
+      </svg>
+      <figcaption><b>Scalpel · finger · bougie</b>The blade stays in until the bougie is in. Take it out first and the tissue planes close, and you will be looking for a hole that no longer exists.</figcaption>
+      </figure>
+    </div>
+
+    <div class="stage">
+      <div class="stage-head"><h3>Tube — and stop early</h3><span class="clock">shallow, not deep</span></div>
+      <ul class="steps">
+        <li>Railroad a <b>6.0 cuffed tube</b> over the bougie, rotating gently as it passes the skin and membrane.</li>
+        <li><b>Advance only until the cuff is through, then a centimetre or two more.</b> The distance from membrane to carina is short. A tube inserted to its normal depth mark sits in the right main bronchus.</li>
+        <li>Inflate the cuff, remove the bougie, ventilate.</li>
+        <li>Confirm with <b>waveform capnography</b>. Chest rise, misting and a rising saturation are supportive but not sufficient — a pretracheal tube can produce all three briefly.</li>
+        <li>Secure with ties and a dedicated holder. Do not let anyone move the patient until it is fixed.</li>
+      </ul>
+      <figure class="dx">
+      <svg class="dx-svg" viewBox="0 0 460 225" role="img" aria-label="Correct shallow tube placement with the cuff just past the membrane, compared with an incorrectly deep tube reaching the right main bronchus">
+        <rect x="112" y="40" width="36" height="100" rx="4" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <line x1="130" y1="140" x2="94" y2="184" stroke="#12233A" stroke-width="11" stroke-linecap="round"/>
+        <line x1="130" y1="140" x2="166" y2="184" stroke="#12233A" stroke-width="11" stroke-linecap="round"/>
+        <rect x="108" y="52" width="6" height="16" fill="#FFFFFF"/>
+        <path d="M62 60 H116 Q128 60 128 72 V96" fill="none" stroke="#12233A" stroke-width="6" stroke-linecap="round"/>
+        <ellipse cx="128" cy="88" rx="12" ry="7" fill="#FFFFFF" stroke="#12233A" stroke-width="2"/>
+        <circle cx="182" cy="46" r="13" fill="#0F7B5A"/><text class="bignum" x="182" y="52" text-anchor="middle">✓</text>
+        <text class="sm ok" x="34" y="202">cuff just through,</text>
+        <text class="sm" x="34" y="216">then 1–2 cm</text>
+
+        <rect x="312" y="40" width="36" height="100" rx="4" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <line x1="330" y1="140" x2="294" y2="184" stroke="#12233A" stroke-width="11" stroke-linecap="round"/>
+        <line x1="330" y1="140" x2="366" y2="184" stroke="#12233A" stroke-width="11" stroke-linecap="round"/>
+        <rect x="308" y="52" width="6" height="16" fill="#FFFFFF"/>
+        <path d="M262 60 H316 Q328 60 328 72 V138 L358 174" fill="none" stroke="#12233A" stroke-width="6" stroke-linecap="round"/>
+        <ellipse cx="350" cy="164" rx="12" ry="7" transform="rotate(50 350 164)" fill="#FFFFFF" stroke="#12233A" stroke-width="2"/>
+        <circle cx="382" cy="46" r="13" fill="#C4162B"/><text class="bignum" x="382" y="52" text-anchor="middle">✕</text>
+        <text class="sm hot" x="232" y="202">normal depth →</text>
+        <text class="sm hot" x="232" y="216">right main bronchus</text>
+      </svg>
+      <figcaption><b>Depth</b>Everything you know about tube depth at the teeth is wrong here. You have entered halfway down the airway, so the tube goes in barely at all.</figcaption>
+      </figure>
+    </div>
+
+    <div class="stage">
+      <div class="stage-head"><h3>If you cannot feel the landmarks</h3><span class="clock">go long and go blunt</span></div>
+      <ul class="steps">
+        <li>Obesity, haematoma, oedema, surgical change and previous radiotherapy all take the anatomy away from your fingertips. Do not keep palpating — that is where the minutes go.</li>
+        <li><b>Vertical midline incision, 8–10 cm</b>, from the thyroid cartilage downwards. Long is safer than short: you stay in the midline where there are no major vessels, and you can extend in either direction.</li>
+        <li><b>Blunt finger dissection</b> down to the larynx. Spread tissues apart, then palpate with the fingertip until you find the cartilage and the soft gap.</li>
+        <li>Once you have identified the membrane by feel, the technique is exactly the same: stab, rotate, bougie, tube.</li>
+        <li>Ultrasound is excellent for marking the membrane in a difficult neck — but only if it is already on and someone else is driving it.</li>
+      </ul>
+      <figure class="dx">
+      <svg class="dx-svg" viewBox="0 0 460 215" role="img" aria-label="Vertical midline neck incision eight to ten centimetres long followed by blunt finger dissection down to the larynx">
+        <path d="M150 34 Q210 8 270 34" fill="none" stroke="#12233A" stroke-width="3"/>
+        <rect x="150" y="24" width="120" height="166" rx="22" fill="#EDEAE5" stroke="#12233A" stroke-width="2.5"/>
+        <line x1="210" y1="48" x2="210" y2="152" stroke="#C4162B" stroke-width="5" stroke-linecap="round"/>
+        <line x1="286" y1="48" x2="286" y2="152" stroke="#5A6673" stroke-width="1"/>
+        <line x1="281" y1="48" x2="291" y2="48" stroke="#5A6673" stroke-width="1"/>
+        <line x1="281" y1="152" x2="291" y2="152" stroke="#5A6673" stroke-width="1"/>
+        <text class="sm" x="296" y="104">8–10 cm</text>
+        <rect x="204" y="86" width="122" height="26" rx="13" fill="#FFFFFF" stroke="#12233A" stroke-width="2"/>
+        <line x1="316" y1="99" x2="240" y2="99" stroke="#0F7B5A" stroke-width="4" marker-end="url(#aGreen)"/>
+        <text class="sm hot" x="6" y="58">vertical, midline,</text>
+        <text class="sm hot" x="6" y="74">and long</text>
+        <text class="sm ok" x="6" y="112">then find the larynx</text>
+        <text class="sm ok" x="6" y="128">with your finger</text>
+        <text class="sm" x="6" y="206">obesity · haematoma · oedema · previous radiotherapy</text>
+      </svg>
+      <figcaption><b>Impalpable neck</b>The midline is bloodless. A long vertical incision costs nothing and buys you the room to work out where you are.</figcaption>
+      </figure>
+    </div>
+
+  </div>
+
+  <!-- ================= NEVER ================= -->
+  <h2 class="sec">Hard stops</h2>
+  <p class="sec-sub">Short list, and every item is a real reported death or disaster.</p>
+  <div class="never">
+    <h3>Never</h3>
+    <ul>
+      <li><b>Never keep attempting laryngoscopy</b> once CICO has been declared.</li>
+      <li><b>Never let go of the larynx</b> until the tube is in and the cuff is up.</li>
+      <li><b>Never insert the tube to normal depth</b> — that is the right main bronchus.</li>
+      <li><b>Never do an open cricothyrotomy in a small child</b> — needle technique instead.</li>
+      <li><b>Never accept chest rise alone</b> as confirmation. Waveform capnography or keep looking.</li>
+      <li><b>Never ventilate through a needle</b> without a route for gas to escape.</li>
+      <li><b>Never abandon a correctly sited tube</b> because the field is bleeding — ventilate first, then deal with the blood.</li>
+      <li><b>Never remove the scalpel</b> before the bougie is in the trachea.</li>
+    </ul>
+  </div>
+
+  <!-- ================= COMPLICATIONS ================= -->
+  <h2 class="sec" id="cric-wrong">When it goes wrong</h2>
+  <p class="sec-sub">Almost all of these are recoverable if you notice them in the first minute.</p>
+
+  <div class="bank">
+
+    <div class="comp">
+      <h3>False passage</h3>
+      <p class="tell">The tube is in the neck but not in the airway. Pretracheal, paratracheal, or through into the mediastinum. This is what kills.</p>
+      <ol>
+        <li><b>No waveform capnography means you are not in the airway</b> until proven otherwise, whatever else you can see.</li>
+        <li>Suspect it with rising resistance, absent chest rise, and rapidly expanding surgical emphysema on ventilation.</li>
+        <li>Do not keep bagging into a false passage — it dissects the planes and destroys your remaining landmarks.</li>
+        <li>Take the tube out, re-identify the membrane with your finger, and start again through the same hole with the bougie.</li>
+        <li>Prevent it: feel for tracheal clicks or hold-up on the bougie before railroading anything.</li>
+      </ol>
+    </div>
+
+    <div class="comp">
+      <h3>Wrong level</h3>
+      <p class="tell">Too high is the thyrohyoid membrane; too low is the cricoid ring or the tracheal rings and the isthmus.</p>
+      <ol>
+        <li>Above the thyroid cartilage → you are in the pre-epiglottic space and will not reach the airway.</li>
+        <li>Through the cricoid ring itself → cartilage fracture and long-term subglottic stenosis.</li>
+        <li>Below the cricoid → the thyroid isthmus bleeds heavily and the trachea is deeper and more mobile.</li>
+        <li>Recover by returning to the handshake: find the hard shield above and the hard ring below, and go into the soft gap between them.</li>
+      </ol>
+      <figure class="dx">
+      <svg class="dx-svg" viewBox="0 0 300 200" role="img" aria-label="Larynx in profile with arrows showing the too high thyrohyoid level, the correct cricothyroid membrane, and the too low tracheal ring level">
+        <path d="M62 30 Q100 18 138 30" fill="none" stroke="#12233A" stroke-width="6" stroke-linecap="round"/>
+        <polygon points="66,48 134,48 134,84 100,96 66,84" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <rect x="78" y="100" width="44" height="16" rx="3" fill="#0F7B5A" fill-opacity="0.25" stroke="#0F7B5A" stroke-width="2"/>
+        <rect x="70" y="120" width="60" height="18" rx="9" fill="#EDEAE5" stroke="#12233A" stroke-width="2"/>
+        <rect x="74" y="144" width="52" height="10" rx="5" fill="#EDEAE5" stroke="#12233A" stroke-width="1.5"/>
+        <rect x="74" y="158" width="52" height="10" rx="5" fill="#EDEAE5" stroke="#12233A" stroke-width="1.5"/>
+        <line x1="188" y1="40" x2="146" y2="40" stroke="#C4162B" stroke-width="3" marker-end="url(#aRed)"/>
+        <path d="M158 34 L172 48 M172 34 L158 48" stroke="#C4162B" stroke-width="3" stroke-linecap="round"/>
+        <text class="sm hot" x="192" y="44">too high</text>
+        <line x1="188" y1="108" x2="128" y2="108" stroke="#0F7B5A" stroke-width="3" marker-end="url(#aGreen)"/>
+        <text class="sm ok" x="192" y="104">correct</text>
+        <text class="sm" x="192" y="118">CTM</text>
+        <line x1="188" y1="160" x2="134" y2="160" stroke="#C4162B" stroke-width="3" marker-end="url(#aRed)"/>
+        <path d="M154 154 L168 168 M168 154 L154 168" stroke="#C4162B" stroke-width="3" stroke-linecap="round"/>
+        <text class="sm hot" x="192" y="164">too low</text>
+        <text class="sm" x="8" y="192">soft gap between two hard landmarks</text>
+      </svg>
+      <figcaption><b>Level</b>Hard, soft, hard. If it does not feel like a dip, it is not the membrane.</figcaption>
+      </figure>
+    </div>
+
+    <div class="comp">
+      <h3>Bleeding</h3>
+      <p class="tell">Anterior jugular veins and the thyroid isthmus. The field goes red immediately and you cannot see anything.</p>
+      <ol>
+        <li><b>Expect it and ignore it.</b> This is a tactile procedure, not a visual one — your finger and the bougie do not need a clear field.</li>
+        <li>Do not stop to suction or pack before the tube is in. Oxygenation first, haemostasis second.</li>
+        <li>Once ventilating, pack around the tube and apply direct pressure. Most venous bleeding settles.</li>
+        <li>Arterial or isthmus bleeding that persists needs surgical exploration — call ENT or surgery early.</li>
+      </ol>
+    </div>
+
+    <div class="comp">
+      <h3>Bougie will not pass</h3>
+      <p class="tell">It meets resistance a centimetre or two in, or slides in freely with no clicks and no hold-up.</p>
+      <ol>
+        <li>Free passage with no hold-up suggests a pretracheal plane, not the airway. Withdraw and reassess.</li>
+        <li>Hard resistance suggests the blade has rotated, the hole has closed, or you are against the posterior wall — flatten your angle and aim more caudally.</li>
+        <li>Put the scalpel back in to hold the tract open if you removed it early.</li>
+        <li>If the anatomy has been lost entirely, convert to a vertical incision and find the larynx with your finger.</li>
+      </ol>
+    </div>
+
+    <div class="comp">
+      <h3>Posterior wall injury</h3>
+      <p class="tell">Aiming straight back rather than down. The oesophagus sits immediately behind.</p>
+      <ol>
+        <li>Prevent it: once through the membrane, angle everything <b>towards the feet</b>, not towards the spine.</li>
+        <li>Limit blade insertion depth — a finger's breadth from the tip is plenty.</li>
+        <li>Suspect it with gastric distension on ventilation, or air in the mediastinum on later imaging.</li>
+        <li>Ventilate through a confirmed airway first, then involve surgery. Injuries are usually repaired at a later operation.</li>
+      </ol>
+    </div>
+
+    <div class="comp">
+      <h3>Afterwards</h3>
+      <p class="tell">A cricothyrotomy is a temporary airway placed under the worst conditions available.</p>
+      <ol>
+        <li>Arrange conversion to a formal tracheostomy or oral intubation once the patient is stable — usually within 24 hours, though evidence for a strict deadline is weak.</li>
+        <li>Involve ENT or surgery early, and image the neck when the patient can tolerate it.</li>
+        <li><b>Debrief the team.</b> This is a rare, high-stress event and the learning evaporates within hours.</li>
+        <li>Complete an incident or airway registry form. These cases are how departments improve their airway systems.</li>
+      </ol>
+    </div>
+
+  </div>
+
+  <!-- ================= KIT & DRUGS ================= -->
+  <h2 class="sec" id="cric-doses">Kit and drugs</h2>
+  <p class="sec-sub">Four items. Anything more elaborate is something you will be assembling while the patient desaturates.</p>
+
+  <div class="tablewrap">
+    <table>
+      <caption>The kit</caption>
+      <thead><tr><th>Item</th><th>Spec</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="drug">Scalpel</td><td class="dose">#10 blade</td><td>Broad, curved belly. A #11 is usable but the point makes posterior wall injury easier.</td></tr>
+        <tr><td class="drug">Bougie</td><td class="dose">Adult, 15 Fr<br>coudé tip</td><td>Cut it shorter if the length is unwieldy. The angled tip gives you the tracheal clicks.</td></tr>
+        <tr><td class="drug">Tube</td><td class="dose">6.0 cuffed ETT</td><td>Or a size 6 cuffed tracheostomy tube. Larger will not pass the membrane reliably.</td></tr>
+        <tr><td class="drug">Syringe, BVM, capnography</td><td class="dose">—</td><td>Capnography is part of the kit, not an optional extra. Have it connected before you cut.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Drugs — only if they change anything</caption>
+      <thead><tr><th>Drug</th><th>Dose</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="drug">Rocuronium</td><td class="dose">1.2 mg/kg IV</td><td>A moving neck makes this much harder, and paralysis relieves laryngospasm and chest wall rigidity. Give it if the patient is not already paralysed.</td></tr>
+        <tr><td class="drug">Suxamethonium</td><td class="dose">1.5 mg/kg IV</td><td>Alternative if already drawn up.<span class="contra">Avoid: hyperkalaemia, burns &gt;24 h, chronic denervation</span></td></tr>
+        <tr><td class="drug">Ketamine</td><td class="dose">1–2 mg/kg IV</td><td>For the patient still awake enough to resist. Do not delay the incision to draw it up.</td></tr>
+        <tr><td class="drug">Lidocaine 1%</td><td class="dose">3–5 mL local</td><td>Only if the patient is awake and there is genuinely time. In true CICO there is not.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <span class="flag stop"><b>Do not wait for drugs</b>In a true CICO the patient is already unconscious and hypoxic. Drugs are an optimisation, never a prerequisite. If someone is drawing something up, you should already be cutting.</span>
+
+  <!-- ================= PEDS ================= -->
+  <h2 class="sec" id="cric-peds">Children</h2>
+  <p class="sec-sub">Different anatomy, different technique, different equipment.</p>
+
+  <div class="tablewrap">
+    <table>
+      <caption>By age</caption>
+      <thead><tr><th>Age</th><th>Technique</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="drug">Roughly &lt; 10–12 yrs</td><td class="dose">Needle cricothyrotomy</td><td>The membrane is tiny, the larynx is soft and mobile, and open techniques cause cartilage damage and stenosis. Exact age cut-off varies between guidelines — use size and palpability, not the birthday alone.</td></tr>
+        <tr><td class="drug">Needle technique</td><td class="dose">14 G cannula<br>45° caudad</td><td>Advance while aspirating with a saline-filled syringe. Bubbles confirm the airway. Hold it — a cannula is easily kinked or displaced.</td></tr>
+        <tr><td class="drug">Oxygen delivery</td><td class="dose">High-pressure source<br>or flow modulator</td><td>A bag-valve will not ventilate through a 14 G cannula. This buys oxygenation, not ventilation — CO₂ will climb.<span class="contra">Requires a route for gas to escape or you will cause barotrauma</span></td></tr>
+        <tr><td class="drug">Definitive airway</td><td class="dose">Surgical tracheostomy</td><td>Call ENT or paediatric surgery the moment you reach this point. Needle cric is a bridge measured in minutes.</td></tr>
+        <tr><td class="drug">Roughly &gt; 12 yrs</td><td class="dose">As for adults</td><td>Scalpel, finger, bougie with a 6.0 cuffed tube.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ================= EXIT ================= -->
+  <h2 class="sec" id="cric-exit">Afterwards</h2>
+  <p class="sec-sub">The tube is in. These are the things that get missed in the relief.</p>
+
+  <div class="exit">
+    <section>
+      <h3>Confirm</h3>
+      <ul>
+        <li>Sustained waveform capnography, not a single trace</li>
+        <li>Bilateral chest rise and equal air entry</li>
+        <li>Saturation and heart rate recovering</li>
+        <li>No expanding surgical emphysema on ventilation</li>
+        <li>Cuff pressure checked once stable</li>
+        <li>Chest film for depth and for a pneumothorax</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Secure and plan</h3>
+      <ul>
+        <li>Tube tied and held — this one falls out easily</li>
+        <li>Depth at the skin recorded and marked</li>
+        <li>Sedation and analgesia running</li>
+        <li>ENT or surgery contacted for definitive airway</li>
+        <li>Bleeding site inspected and packed if needed</li>
+        <li>Bed booked — this patient is going to critical care</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Chart and debrief</h3>
+      <ul>
+        <li>Time CICO was declared and time of first breath</li>
+        <li>Every airway attempt before it, and by whom</li>
+        <li>Technique used, tube size, complications</li>
+        <li>Confirmation method documented explicitly</li>
+        <li>Team debrief before anyone leaves the shift</li>
+        <li>Airway registry or incident form completed</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    Bedside quick reference for emergency cricothyrotomy. Reflects DAS and standard emergency airway practice; verify equipment, drug doses and paediatric cut-offs against your own institutional guidelines and difficult airway trolley. Not a substitute for training — this is a procedure to have rehearsed before you need it. Diagrams are original schematics drawn for this card, not reproductions of textbook figures — free to print, post and copy.
+  </footer>
+
+</div>
+</section>
+
+<button type="button" class="totop" aria-label="Back to top">&#8593;</button>
+
+<script>
+(function(){
+  var KEYS = ['delivery','chest','cric'];
+  var NAMES = {home:'ED Crash Cards', delivery:'Precipitous Delivery', chest:'Tube Thoracostomy', cric:'Cricothyrotomy'};
+  var views = {}, i;
+  for(i=0;i<KEYS.length;i++) views[KEYS[i]] = document.getElementById('v-'+KEYS[i]);
+  views.home = document.getElementById('v-home');
+  var pills = Array.prototype.slice.call(document.querySelectorAll('.pills button'));
+  var top = document.querySelector('.totop');
+
+  function show(key){
+    for(var k in views) views[k].classList.toggle('on', k === key);
+    pills.forEach(function(b){ b.setAttribute('aria-current', b.dataset.go === key ? 'true':'false'); });
+    document.title = key === 'home' ? NAMES.home : NAMES[key] + ' — ED Crash Cards';
+  }
+
+  function route(){
+    var h = (location.hash || '').slice(1);
+    if(!h){ show('home'); window.scrollTo(0,0); return; }
+    var key = h.split('-')[0];
+    if(KEYS.indexOf(key) < 0){ show('home'); window.scrollTo(0,0); return; }
+    show(key);
+    var el = document.getElementById(h);
+    if(el && h !== key){
+      // let the view paint before measuring the sticky offsets
+      requestAnimationFrame(function(){
+        var off = document.querySelector('.appbar').offsetHeight
+                + document.querySelector('#v-'+key+' nav.jump').offsetHeight + 6;
+        window.scrollTo(0, el.getBoundingClientRect().top + window.pageYOffset - off);
+      });
+    } else {
+      window.scrollTo(0,0);
+    }
+  }
+
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('[data-go]');
+    if(!b) return;
+    e.preventDefault();
+    location.hash = b.dataset.go === 'home' ? '' : b.dataset.go;
+    if(!location.hash) route();
+  });
+
+  window.addEventListener('hashchange', route);
+  window.addEventListener('scroll', function(){
+    top.classList.toggle('on', window.pageYOffset > 700);
+  }, {passive:true});
+  top.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+  var pa = document.getElementById('printAll');
+  if(pa) pa.addEventListener('click', function(){
+    document.body.classList.add('printall');
+    window.print();
+  });
+  window.addEventListener('afterprint', function(){ document.body.classList.remove('printall'); });
+
+  route();
+})();
+</script>
+</body>
+</html>
