@@ -1,0 +1,70 @@
+[
+  {
+    "name": "Geburtshilfe_Dammschutz_-_Obstetrics_perineal_protection.png",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Geburtshilfe_Dammschutz_-_Obstetrics_perineal_protection.png",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Geburtshilfe_Dammschutz_-_Obstetrics_perineal_protection.png",
+    "offline_bundled": true,
+    "cache_method": "same-origin installation precache; original image unchanged",
+    "local_path": "anatomy/delivery.png"
+  },
+  {
+    "name": "McRoberts_maneuver.svg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/McRoberts_maneuver.svg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:McRoberts_maneuver.svg",
+    "offline_bundled": true,
+    "cache_method": "same-origin installation precache; original image unchanged",
+    "local_path": "anatomy/mcroberts.svg"
+  },
+  {
+    "name": "Suprapubic-pressureforSD.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Suprapubic-pressureforSD.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Suprapubic-pressureforSD.jpg",
+    "offline_bundled": true,
+    "cache_method": "same-origin installation precache; original image unchanged",
+    "local_path": "anatomy/suprapubic.jpg"
+  },
+  {
+    "name": "WidthOfShoulders.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/WidthOfShoulders.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:WidthOfShoulders.jpg",
+    "offline_bundled": true,
+    "cache_method": "same-origin installation precache; original image unchanged",
+    "local_path": "anatomy/shoulder-width.jpg"
+  },
+  {
+    "name": "ShoulderDystociaFig1.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/ShoulderDystociaFig1.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:ShoulderDystociaFig1.jpg",
+    "offline_bundled": true,
+    "cache_method": "same-origin installation precache; original image unchanged",
+    "local_path": "anatomy/shoulder-fig1.jpg"
+  },
+  {
+    "name": "ShoulderDystociaFig3.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/ShoulderDystociaFig3.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:ShoulderDystociaFig3.jpg",
+    "offline_bundled": false,
+    "cache_method": "optional browser cache, requires successfully decoded image"
+  },
+  {
+    "name": "ShoulderDystociaFig4.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/ShoulderDystociaFig4.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:ShoulderDystociaFig4.jpg",
+    "offline_bundled": false,
+    "cache_method": "optional browser cache, requires successfully decoded image"
+  },
+  {
+    "name": "Cricothyrotomy.png",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Cricothyrotomy.png",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Cricothyrotomy.png",
+    "offline_bundled": false,
+    "cache_method": "optional browser cache, requires successful image decoding"
+  },
+  {
+    "name": "Cricothyrotomystat.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Cricothyrotomystat.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Cricothyrotomystat.jpg",
+    "offline_bundled": false,
+    "cache_method": "optional browser cache, requires successfully decoded image"
+  }
+]

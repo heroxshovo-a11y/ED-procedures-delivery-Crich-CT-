@@ -1,0 +1,32 @@
+[
+  {
+    "filename": "delivery.png",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Geburtshilfe_Dammschutz_-_Obstetrics_perineal_protection.png",
+    "sha256": "b2b1dbc9f305f472b15a0de568be36208956e18fd5302aab838227405de831b1",
+    "bytes": 62653
+  },
+  {
+    "filename": "mcroberts.svg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/c/c3/McRoberts_maneuver.svg",
+    "sha256": "c0edec0bcbfbe4b5df9ccaff212e1d11b15f047eda1d75d2aefb95d41ff23103",
+    "bytes": 240799
+  },
+  {
+    "filename": "suprapubic.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/9/98/Suprapubic-pressureforSD.jpg",
+    "sha256": "85989492e9f3d5a493d21e11f9cafe05dac2dc7ce3385de3d2fe7c4e5fd84391",
+    "bytes": 64492
+  },
+  {
+    "filename": "shoulder-width.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/c/c4/WidthOfShoulders.jpg",
+    "sha256": "1acabdea407831a4cd381239d7c2394aaad70843ac16a79639d633208186f4d3",
+    "bytes": 22363
+  },
+  {
+    "filename": "shoulder-fig1.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/6/62/ShoulderDystociaFig1.jpg",
+    "sha256": "6adba7dab677dccff79b54798f2c3b97495bfeb949f5aa7d63809e3d03a55a64",
+    "bytes": 46015
+  }
+]
