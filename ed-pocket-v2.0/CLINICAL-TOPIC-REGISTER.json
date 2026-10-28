@@ -1,0 +1,455 @@
+{
+  "version": "2.0.0-preview",
+  "date": "2026-10-28",
+  "clinician_approvals": 0,
+  "review_type": "AI-assisted risk/source triage only",
+  "entries": [
+    {
+      "id": "start",
+      "title": "Start here: two patients, two leads",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "Moderate",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "AHA 2025",
+        "WHO 2025"
+      ],
+      "finding": "Verify two-team staffing, transfer acceptance pathways and clinician availability against each site; no staff availability can be inferred from checklist.",
+      "dose_or_device_numbers_to_verify": [
+        "0.1 mg"
+      ],
+      "char_count": 3193
+    },
+    {
+      "id": "delivery",
+      "title": "Precipitous vaginal delivery",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "Critical",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "AHA 2025",
+        "WHO 2025",
+        "RCOG 2026"
+      ],
+      "finding": "Compare nuchal-cord handling, oxytocin prophylaxis, delayed cord clamping, placenta management and escalation against local OB protocol; high-risk procedures require supervised training.",
+      "dose_or_device_numbers_to_verify": [
+        "10 units"
+      ],
+      "char_count": 3870
+    },
+    {
+      "id": "nrp",
+      "title": "Newborn resuscitation",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "Critical",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "AHA 2025"
+      ],
+      "finding": "AHA 2025 confirms early ventilation for apnea/gasping or persistent HR <100. HR response alone must never stop ventilation when breathing remains inadequate.",
+      "dose_or_device_numbers_to_verify": [],
+      "char_count": 2983
+    },
+    {
+      "id": "ventilation",
+      "title": "Newborn ventilation",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "Critical",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "AHA 2025"
+      ],
+      "finding": "AHA 2025 supports ventilation 30\u201360/min and pressure titration to effectiveness; training must include leak/obstruction troubleshooting and avoidance of excessive pressure.",
+      "dose_or_device_numbers_to_verify": [
+        "20-30 cm",
+        "5 cm H2O"
+      ],
+      "char_count": 2065
+    },
+    {
+      "id": "neo-airway",
+      "title": "Newborn advanced airway",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "High",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "AHA 2025"
+      ],
+      "finding": "Check ETT sizing/depth rules and SGA gestational-age applicability against current primary guideline and stocked devices; no universal device rule.",
+      "dose_or_device_numbers_to_verify": [],
+      "char_count": 2191
+    },
+    {
+      "id": "uvc",
+      "title": "Emergency umbilical venous access",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "High",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "AHA 2025",
+        "institutional neonatal UVC policy"
+      ],
+      "finding": "High-risk sterile procedure and emergency line placement: confirm catheter depth, access precautions, flush and local kit independently.",
+      "dose_or_device_numbers_to_verify": [
+        "0.1 mg",
+        "1-2 cm",
+        "3 mL",
+        "5 Fr"
+      ],
+      "char_count": 3221
+    },
+    {
+      "id": "neo-drugs",
+      "title": "Newborn epinephrine doses",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "Critical",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "AHA 2025",
+        "institutional pharmacy"
+      ],
+      "finding": "High-risk neonatal epinephrine table and ETT route: independent neonatal pharmacist + NRP instructor concentration/dose/flush/route verification required; doses left unchanged.",
+      "dose_or_device_numbers_to_verify": [
+        "0.02 mg",
+        "0.02 mg/kg",
+        "0.03 mg/kg",
+        "0.04 mg",
+        "0.06 mg",
+        "0.08 mg",
+        "0.1 mg",
+        "0.1 mg/kg",
+        "0.2 mL",
+        "0.3 mL",
+        "0.4 mL",
+        "0.6 mL",
+        "0.8 mL",
+        "1 mg",
+        "100 mcg",
+        "3 mL",
+        "5-1 mL"
+      ],
+      "char_count": 1552
+    },
+    {
+      "id": "neo-support",
+      "title": "Newborn fluids and glucose",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "High",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "AHA 2025",
+        "CPS hypoglycemia"
+      ],
+      "finding": "High-risk fluids, dextrose, glucose rechecks and post-resuscitation feeding/transport require neonatal specialist/pharmacy review; dose content left unchanged.",
+      "dose_or_device_numbers_to_verify": [
+        "10 mL",
+        "10-20 mL",
+        "2 mL",
+        "200 mg/kg",
+        "3.3 mL",
+        "32 mg",
+        "47 mg",
+        "5.5 mg/kg",
+        "80 mL"
+      ],
+      "char_count": 2417
+    },
+    {
+      "id": "shoulder",
+      "title": "Shoulder dystocia",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "Critical",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "RCOG 2026"
+      ],
+      "finding": "RCOG 2026 confirms emergency maneuvers require practical skills training. Avoid treating anatomical figures as an authorized procedural sequence; no fundal pressure.",
+      "dose_or_device_numbers_to_verify": [],
+      "char_count": 3364
+    },
+    {
+      "id": "prolapse",
+      "title": "Umbilical cord prolapse",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "High",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "RCOG cord prolapse (older guideline; update check required)"
+      ],
+      "finding": "Cord elevation and immediate obstetric resolution require site-specific capability check; RCOG cord-prolapse reference is older and update checking is needed.",
+      "dose_or_device_numbers_to_verify": [
+        "0.25 mg",
+        "500-750 mL"
+      ],
+      "char_count": 2804
+    },
+    {
+      "id": "breech",
+      "title": "Unexpected breech delivery",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "Critical",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "institutional OB emergency policy; senior obstetric specialist"
+      ],
+      "finding": "Unexpected breech delivery involves advanced, low-frequency maneuvers: do not use text-only guidance as procedural competency; seek live expert support and hands-on training.",
+      "dose_or_device_numbers_to_verify": [],
+      "char_count": 3316
+    },
+    {
+      "id": "pph",
+      "title": "Postpartum hemorrhage",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "Critical",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "WHO 2025"
+      ],
+      "finding": "WHO 2025: \u2265500 mL, or \u2265300 mL plus abnormal hemodynamic sign. Clinical concern and ongoing bleeding override numeric thresholds.",
+      "dose_or_device_numbers_to_verify": [
+        "000 mL",
+        "1 g",
+        "1 mL",
+        "2 g",
+        "200 mg",
+        "300 mL",
+        "500 mL"
+      ],
+      "char_count": 3701
+    },
+    {
+      "id": "maternal-drugs",
+      "title": "Maternal hemorrhage medications",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "Critical",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "WHO 2025",
+        "institutional pharmacy"
+      ],
+      "finding": "Oxytocin/TXA/second-line uterotonic doses and contraindications require direct pharmacy and OB verification; dosing unchanged in this pass.",
+      "dose_or_device_numbers_to_verify": [
+        "0.2 mg",
+        "1 g",
+        "10 units",
+        "100 mL",
+        "125 mL",
+        "2 mg",
+        "20 units",
+        "250 mcg",
+        "500 mL",
+        "600 mL",
+        "800 mcg"
+      ],
+      "char_count": 2847
+    },
+    {
+      "id": "placenta",
+      "title": "Inversion, retained placenta and tears",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "High",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "WHO 2025",
+        "OB surgery"
+      ],
+      "finding": "Inversion, retained placenta and traumatic bleeding require trained procedural rescue, urgent OB/surgical escalation; do not allow text to substitute training.",
+      "dose_or_device_numbers_to_verify": [],
+      "char_count": 3185
+    },
+    {
+      "id": "eclampsia",
+      "title": "Eclampsia: seizures and magnesium",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "High",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "ACOG/SMFM local protocols"
+      ],
+      "finding": "High-risk magnesium regimens, toxicity response, renal adjustment and BP thresholds require institutional OB/pharmacy sign-off.",
+      "dose_or_device_numbers_to_verify": [
+        "1 g",
+        "10 mL",
+        "2 g",
+        "6 g"
+      ],
+      "char_count": 2303
+    },
+    {
+      "id": "severe-bp",
+      "title": "Severe hypertension in pregnancy",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "High",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "ACOG/SMFM local protocols"
+      ],
+      "finding": "Severe persistent BP threshold and treatment timing need confirmation against current ACOG/SMFM and facility-approved drug protocol.",
+      "dose_or_device_numbers_to_verify": [
+        "10 mg",
+        "140 mg",
+        "20 mg",
+        "40 mg",
+        "5-10 mg",
+        "50 mg",
+        "80 mg"
+      ],
+      "char_count": 1654
+    },
+    {
+      "id": "maternal-arrest",
+      "title": "Maternal arrest: resuscitative delivery",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "Critical",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "AHA 2025"
+      ],
+      "finding": "AHA 2025 confirms manual left uterine displacement, prep at arrest recognition and aim for delivery by 5 minutes if no ROSC; procedural skills review pending.",
+      "dose_or_device_numbers_to_verify": [],
+      "char_count": 3283
+    },
+    {
+      "id": "aftercare",
+      "title": "After birth and after resuscitation",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "Moderate",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "AHA 2025",
+        "neonatal transport protocol"
+      ],
+      "finding": "Neonatal monitoring and HIE referral/cooling criteria must be reconciled with accepting neonatal service; avoid delaying transfer.",
+      "dose_or_device_numbers_to_verify": [],
+      "char_count": 1752
+    },
+    {
+      "id": "prophylaxis",
+      "title": "Newborn prophylaxis and handoff",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "Critical",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "AAP 2026",
+        "CDC Dec 2025 (divergent birth-dose guidance)"
+      ],
+      "finding": "HIGH-RISK SOURCE DIVERGENCE: CDC changed recommendations Dec 2025 for HBsAg-negative mothers; AAP still favors universal birth dose. Follow local policy, parent discussion, and urgent positive/unknown-status prophylaxis.",
+      "dose_or_device_numbers_to_verify": [
+        "0.5 mL",
+        "0.5 mg/kg",
+        "000 g",
+        "1 mg",
+        "300 mcg",
+        "500 g"
+      ],
+      "char_count": 2509
+    },
+    {
+      "id": "chest-tube",
+      "title": "Adult tube thoracostomy",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "High",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "BTS 2023",
+        "WSES-AAST 2025"
+      ],
+      "finding": "Check side/site landmarks, sedation/local anesthetic maxima, pleural safety and tube management; do not blindly disrupt adhesions.",
+      "dose_or_device_numbers_to_verify": [
+        "10 mg",
+        "14 Fr",
+        "2-3 cm",
+        "20 cm H2O",
+        "300 mg",
+        "32 Fr",
+        "4.5 mg/kg",
+        "500 mg",
+        "7 mg/kg"
+      ],
+      "char_count": 3774
+    },
+    {
+      "id": "pigtail",
+      "title": "Adult Seldinger pigtail",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "Moderate",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "BTS 2023"
+      ],
+      "finding": "Drain indication, pleural ultrasound, kit-specific dilator use and local escalation need procedural review.",
+      "dose_or_device_numbers_to_verify": [],
+      "char_count": 1401
+    },
+    {
+      "id": "drain",
+      "title": "Chest drain problems",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "Moderate",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "BTS 2023"
+      ],
+      "finding": "Occlusion, disconnection, excessive drainage and clinical deterioration require local troubleshooting protocol; drain troubleshooting is not a substitute for resuscitation.",
+      "dose_or_device_numbers_to_verify": [
+        "200 mL",
+        "500 mL"
+      ],
+      "char_count": 2515
+    },
+    {
+      "id": "cric",
+      "title": "Adult emergency cricothyrotomy",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "Critical",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "DAS 2025"
+      ],
+      "finding": "DAS 2025 supports vertical skin incision as default when membrane landmarks uncertain; FONA competency, equipment and governance require local sign-off.",
+      "dose_or_device_numbers_to_verify": [
+        "10-15 cm",
+        "14 G",
+        "8-10 cm"
+      ],
+      "char_count": 3774
+    },
+    {
+      "id": "readiness",
+      "title": "Before covering an ED without OB",
+      "original_date": "2026-09-18",
+      "triage_date": "2026-10-28",
+      "priority": "Moderate",
+      "status": "AI triage complete \u00b7 independent clinical verification pending",
+      "primary_sources_to_reconcile": [
+        "institution-specific policy"
+      ],
+      "finding": "Check facility resources on every shift; profile checkmarks do not verify real-time stock, transfer availability or responder capability.",
+      "dose_or_device_numbers_to_verify": [],
+      "char_count": 2078
+    }
+  ]
+}

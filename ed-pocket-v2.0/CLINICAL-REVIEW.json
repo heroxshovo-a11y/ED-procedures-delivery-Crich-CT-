@@ -1,0 +1,55 @@
+{
+  "review_type": "Five independent domain-specific model review passes; NO five human doctors or independently credentialed agents participated.",
+  "date": "2026-10-28",
+  "baseline": "ED Pocket v1.7 verified offline package",
+  "source_guidelines": {
+    "newborn": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/neonatal-resuscitation",
+    "hemorrhage": "https://www.ncbi.nlm.nih.gov/books/NBK619233/",
+    "shoulder_dystocia": "https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/shoulder-dystocia-green-top-guideline-no-42/",
+    "airway": "https://doi.org/10.1016/j.bja.2025.10.006"
+  },
+  "lenses": [
+    {
+      "lens": "1. ED resuscitation/safety",
+      "priority": "High",
+      "finding": "NRP HR >=100 branch implied weaning PPV regardless of respiratory effort.",
+      "action": "Explicitly continue ventilation for persistent apnea/gasping even if HR is >=100; only wean when breathing adequately."
+    },
+    {
+      "lens": "2. Neonatal emergency care",
+      "priority": "Moderate",
+      "finding": "Initial oxygen by gestational age was absent from first-pass rapid card.",
+      "action": "Added 2025 AHA/AAP gestational-age starting oxygen bands with emphasis on titration and preductal SpO2."
+    },
+    {
+      "lens": "3. Emergency airway/procedures",
+      "priority": "Moderate",
+      "finding": "Chest-tube rapid card implied sweeping adhesions may be routine.",
+      "action": "Replaced wording with confirm intrapleural position, do not blindly disrupt adhesions, stop for resistance. Maintained adult eFONA pathway and capnography."
+    },
+    {
+      "lens": "4. Obstetric emergencies",
+      "priority": "Moderate",
+      "finding": "PPH prompt did not spell out WHO 2025 abnormal vital thresholds and aftercare documentation could be clearer.",
+      "action": "Added explicit abnormal hemodynamic triggers, cumulative loss and medication/handoff timestamps. RCOG 2026 guidance link maintained."
+    },
+    {
+      "lens": "5. ED human factors/usability",
+      "priority": "Moderate",
+      "finding": "Cross-referencing related rare emergencies required returning to dashboard, increasing taps and attention cost.",
+      "action": "Added large one-tap jumps among delivery, neonatal resuscitation, shoulder dystocia, PPH and neonatal epinephrine; checklists still reset on guide exit."
+    }
+  ],
+  "unresolved": [
+    "Formal ABEM/OB/neonatology clinician sign-off not obtained.",
+    "Site-specific medication preparations and contraindications have not been reconciled.",
+    "The 24-topic detailed handbook was not line-by-line re-audited in this pass.",
+    "iPhone on-device offline validation required.",
+    "Four optional artwork plates still require network/cache."
+  ],
+  "no_changes": [
+    "No medication doses were modified.",
+    "No new illustrations were generated.",
+    "No PHI fields or telemetry added."
+  ]
+}
