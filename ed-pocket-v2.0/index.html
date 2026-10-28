@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="theme-color" content="#101b2b"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="ED Pocket"/><meta name="description" content="Clinical training preview and offline-first physician cognitive aids: delivery, newborn resuscitation, procedures."/>
+<link rel="manifest" href="manifest.webmanifest"/><link rel="icon" href="icon-192.png"/><link rel="apple-touch-icon" href="icon-192.png"/>
+<title>ED Pocket — clinical quick reference</title><link rel="stylesheet" href="style.css"/>
+</head><body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar"><div class="brand"><div class="brandmark">✳</div><div><strong>ED Pocket</strong><span>CLINICAL FIELD GUIDE</span></div></div>
+  <div class="side-caption">WORKSPACE</div><button class="navitem active" data-nav="home"><span>⌂</span> Dashboard</button><button class="navitem" data-nav="favorites"><span>☆</span> Saved guides</button><button class="navitem" data-nav="library"><span>▤</span> Full library</button><button class="navitem" data-nav="atlas"><span>◈</span> Visual atlas</button><button class="navitem" data-nav="tools"><span>⚡</span> On-shift tools</button><div class="side-rule"></div><div class="side-caption">HIGH-PRIORITY</div><div id="side-links"></div><div class="side-bottom"><div class="online-dot" id="status-dot"></div><span id="network-status">Ready for offline access</span><div class="side-small">Independent clinical aid · v2.0 preview</div></div></aside>
+  <div class="main-wrap"><header class="topbar"><button id="menu" class="icon-btn menu" aria-label="Toggle menu">☰</button><div class="topcrumb">REFERENCE / <span id="crumb">DASHBOARD</span></div><div class="top-actions"><button id="quick-emergency" class="header-emergency" data-tool="emergency" title="Emergency Mode">⚡ Emergency</button><button id="size-btn" class="icon-btn" aria-label="Toggle large text" title="Large text">Aa</button><button id="theme-btn" class="icon-btn" aria-label="Toggle appearance" title="Toggle appearance">☾</button></div></header><main id="view" tabindex="-1"></main><footer class="mobile-nav"><button data-nav="home" class="selected"><span>⌂</span>Home</button><button data-nav="favorites"><span>☆</span>Saved</button><button data-nav="library"><span>▤</span>Library</button><button data-nav="atlas"><span>◈</span>Atlas</button></footer></div>
+</div>
+<script src="rapid.js"></script><script src="main.js"></script><script src="review-index.js"></script><script src="tools.js"></script>
+</body></html>

@@ -1,0 +1,17 @@
+{
+  "name": "ED Pocket \u2014 Clinical Reference",
+  "short_name": "ED Pocket",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "theme_color": "#101b2b",
+  "background_color": "#0c1522",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
