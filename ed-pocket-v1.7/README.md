@@ -4,7 +4,7 @@ This branch contains a **reproducible source distribution** of ED Pocket, a phys
 
 ## What's new
 
-- Six verified, licensed original Wikimedia medical illustrations can be bundled for offline use.
+- Five verified, licensed original Wikimedia medical illustrations can be bundled for offline use.
 - Anatomy images are SHA-256 verified during packaging. A changed or unavailable source halts the build.
 - Three additional advanced/procedural figures remain optional online images, not misrepresented as bundled.
 - The application reports local/optional plate status separately, with a cache-only image decoding test.
@@ -22,7 +22,7 @@ cd /tmp/ed-pocket-v1.7
 python3 build_release.py
 ```
 
-The build creates `/tmp/ED_Pocket_v1.7_Offline_Atlas_complete.zip` with six verified source images in `anatomy/`. If Wikimedia rate-limits a download, retry later; **do not publish a partial offline package**.
+The build creates `/tmp/ED_Pocket_v1.7_Offline_Atlas_complete.zip` with five verified source images in `anatomy/`. If Wikimedia rate-limits a download, retry later; **do not publish a partial offline package**.
 
 Review every illustration in a medical context before on-shift use. The guide is not institutionally endorsed or specialist validated.
 
