@@ -33,7 +33,7 @@ jobs:
           cd "$RUNNER_TEMP/ed-pocket"
           python3 build_release.py
           unzip -t ../ED_Pocket_v1.7_Offline_Atlas_complete.zip | tail -1
-          test "$(find anatomy -type f | wc -l)" -eq 6
+          test "$(find anatomy -type f | wc -l)" -eq 5
       - name: Upload complete offline package
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
